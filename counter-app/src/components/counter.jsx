@@ -5,14 +5,14 @@ class Counter extends Component {
     count: 0,
   };
 
-  constructor() {
-    super();
-    this.handledIncrement = this.handledIncrement.bind(this);
-  }
+  // constructor() {
+  //   super();
+  //   this.handledIncrement = this.handledIncrement.bind(this);
+  // }
 
-  handledIncrement() {
+  handledIncrement = () => {
     this.setState({ count: this.state.count + 1 });
-  }
+  };
 
   render() {
     let classes = this.getBadgeClasses();

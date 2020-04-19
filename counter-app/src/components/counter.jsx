@@ -5,23 +5,17 @@ class Counter extends Component {
     count: 0,
   };
 
-  // constructor() {
-  //   super();
-  //   this.handledIncrement = this.handledIncrement.bind(this);
-  // }
-
-  handledIncrement = () => {
+  handledIncrement = (product) => {
+    console.log(product);
     this.setState({ count: this.state.count + 1 });
   };
 
   render() {
-    let classes = this.getBadgeClasses();
-
     return (
       <React.Fragment>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
         <button
-          onClick={this.handledIncrement}
+          onClick={() => this.handledIncrement({ id: 1 })}
           className="btn btn-secondary btn-sm"
         >
           Increment

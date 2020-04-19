@@ -9,10 +9,12 @@ class App extends Component {
     totalCounters: 0,
   };
 
+  handleTotalCounters = () => {};
+
   render() {
     return (
       <React.Fragment>
-        {/*<NavBar totalCounters={this.state.totalCounters} />*/}
+        <NavBar totalCounters={this.state.totalCounters} />
         <main className="container">
           <Counters onChangedTotalCounter={this.handleTotalCounters} />
         </main>

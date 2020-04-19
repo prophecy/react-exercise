@@ -11,6 +11,16 @@ class Counters extends Component {
     ],
   };
 
+  /*
+  constructor(props) {
+    super();
+
+    props.onChangedTotalCounter(() => {
+      this.state.counters.filter((c) => c.value > 0);
+    });
+  }
+  */
+
   handleReset = () => {
     const counters = this.state.counters.map((c) => {
       c.value = 0;
@@ -35,6 +45,12 @@ class Counters extends Component {
   render() {
     return (
       <div>
+        <h6>
+          Counter:{" "}
+          <span className="badge badge-pill badge-secondary">
+            {this.state.counters.filter((c) => c.value > 0).length}
+          </span>
+        </h6>
         <button
           onClick={this.handleReset}
           className="btn btn-primary btn-sm m-2"

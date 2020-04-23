@@ -1,9 +1,39 @@
-header {
-  background-color: gray;
-  width: 100%;
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+
+  background-color: lightgray;
+  text-align: center;
 }
 
-footer {
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+
   background-color: lightgray;
-  width: 100%;
+  text-align: center;
+}
+
+.container {
+  position: absolute;
+
+  top: 40px;
+  bottom: 40px;
+  left: 20px;
+  right: 20px;
+
+  background-color: lightpink;
+  align-items: center;
+}
+
+.login-box {
+  background-color: mediumpurple;
+  width: 200px;
+  height: 200px;
 }

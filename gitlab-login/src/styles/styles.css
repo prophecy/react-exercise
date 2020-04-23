@@ -4,7 +4,6 @@
   left: 0;
   right: 0;
   height: 40px;
-
   background-color: lightgray;
   text-align: center;
 }
@@ -15,8 +14,25 @@
   left: 0;
   right: 0;
   height: 40px;
-
   background-color: lightgray;
   text-align: center;
+}
+
+.container {
+  position: absolute;
+  top: 40px;
+  bottom: 40px;
+  left: 20px;
+  right: 20px;
+  background-color: lightpink;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-box {
+  background-color: mediumpurple;
+  width: 200px;
+  height: 200px;
 }
 /*# sourceMappingURL=styles.css.map */

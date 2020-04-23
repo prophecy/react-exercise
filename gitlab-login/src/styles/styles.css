@@ -84,6 +84,18 @@
           align-items: center;
 }
 
+.title h1 {
+  font-size: 28px;
+}
+
+.description h1 {
+  font-size: 24px;
+}
+
+.description p {
+  font-size: 16px;
+}
+
 .login-box {
   background-color: mediumpurple;
   height: 300px;

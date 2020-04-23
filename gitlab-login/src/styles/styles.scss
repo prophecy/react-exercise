@@ -35,6 +35,7 @@
   width: 100%;
 }
 
+// Debug block
 [class*="col-"] {
   float: left;
   padding: 15px;
@@ -75,7 +76,19 @@
   align-items: center;
 }
 
+.title {
+  h1 {
+    font-size: 28px;
+  }
+}
+
 .description {
+  h1 {
+    font-size: 24px;
+  }
+  p {
+    font-size: 16px;
+  }
 }
 
 .login-box {

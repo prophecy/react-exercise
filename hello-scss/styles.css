@@ -1,0 +1,12 @@
+header {
+  background-color: #77275f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header button {
+  background-color: #841da3;
+  color: #7186ff;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,14 @@
+$bgColor: rgb(119, 39, 95);
+$textColor: rgb(113, 163, 255);
+$buttonBgColor: rgb(132, 29, 163);
+$buttonTextColor: rgb(113, 134, 255);
+
+header {
+  background-color: $bgColor;
+  display: flex;
+
+  button {
+    background-color: $buttonBgColor;
+    color: $buttonTextColor;
+  }
+}

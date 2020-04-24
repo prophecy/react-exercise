@@ -1,0 +1,44 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background-color: lightgray;
+  text-align: center;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background-color: lightgray;
+  text-align: center;
+}
+
+.container {
+  position: absolute;
+  top: 40px;
+  bottom: 40px;
+  left: 10px;
+  right: 10px;
+  background-color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.title h1 {
+  font-size: 28px;
+}
+
+.description h1 {
+  font-size: 24px;
+}
+
+.description p {
+  font-size: 16px;
+}
+/*# sourceMappingURL=layout.css.map */

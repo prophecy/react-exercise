@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 
 import Tabs from "./Tabs";
+import LoginFormLDAP from "./LoginFormLDAP";
+import LoginFormStandard from "./LoginFormStandard";
 
 class LoginBox extends Component {
   state = {};
@@ -10,10 +12,10 @@ class LoginBox extends Component {
         <div>
           <Tabs>
             <div label="LDAP">
-              See ya later, <em>Alligator</em>!
+              <LoginFormLDAP />
             </div>
             <div label="Standard">
-              After &apos;while, <em>Crocodile</em>!
+              <LoginFormStandard />
             </div>
           </Tabs>
         </div>

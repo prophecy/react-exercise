@@ -42,15 +42,37 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+@media (max-width: 480px) {
+  .container .inner-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .container .inner-content .description {
   float: left;
-  width: 70%;
+  width: 60%;
   margin: 10px;
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
+}
+
+@media (max-width: 480px) {
+  .container .inner-content .description {
+    width: 100%;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
 }
 
 .container .inner-content .description h1 {
@@ -62,12 +84,20 @@
 }
 
 .container .inner-content .login-box {
-  width: 30%;
-  height: 300px;
+  width: 40%;
   float: left;
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
+}
+
+@media (max-width: 480px) {
+  .container .inner-content .login-box {
+    width: 100%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
 }
 
 .container .inner-content .login-box .tab-list {

@@ -23,6 +23,14 @@
 }
 
 /* Content */
+$mobile-width-extra-small: 480px;
+$mobile-width-small: 768px;
+$mobile-width-medium: 992px;
+$mobile-width-large: 1200px;
+$mobile-width: $mobile-width-extra-small;
+
+$description-width: 60%;
+$login-box-width: 100% - $description-width;
 
 .container {
   width: 100%;
@@ -43,12 +51,21 @@
   .inner-content {
     width: 100%;
     display: flex;
+    flex-direction: row;
+    @media (max-width: $mobile-width) {
+      flex-direction: column;
+    }
 
     .description {
       float: left;
-      width: 70%;
+      width: $description-width;
       margin: 10px;
       order: 1;
+
+      @media (max-width: $mobile-width) {
+        width: 100%;
+        order: 2;
+      }
 
       h1 {
         font-size: 22px;
@@ -59,10 +76,14 @@
     }
 
     .login-box {
-      width: 30%;
-      height: 300px;
+      width: $login-box-width;
       float: left;
       order: 2;
+
+      @media (max-width: $mobile-width) {
+        width: 100%;
+        order: 1;
+      }
 
       .tab-list {
         border-bottom: 1px solid #ccc;

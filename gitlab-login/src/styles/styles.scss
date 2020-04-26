@@ -1,3 +1,94 @@
-@import "./grid_12.scss";
-@import "./login-box.scss";
-@import "./layout.scss";
+/* Header and footer */
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+
+  background-color: lightgray;
+  text-align: center;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+
+  background-color: lightgray;
+  text-align: center;
+}
+
+/* Content */
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  .title {
+    width: 100%;
+
+    h1 {
+      font-size: 28px;
+    }
+  }
+
+  .inner-content {
+    width: 100%;
+    display: flex;
+
+    .description {
+      float: left;
+      width: 70%;
+      margin: 10px;
+      order: 1;
+
+      h1 {
+        font-size: 22px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+
+    .login-box {
+      width: 30%;
+      height: 300px;
+      float: left;
+      order: 2;
+
+      .tab-list {
+        border-bottom: 1px solid #ccc;
+        padding-left: 0;
+      }
+
+      .tab-list-item {
+        display: inline-block;
+        list-style: none;
+        margin-bottom: -1px;
+        padding: 0.5rem 0.75rem;
+        cursor: pointer;
+      }
+
+      .tab-list-active {
+        background-color: white;
+        border: solid #ccc;
+        border-width: 1px 1px 0 1px;
+      }
+
+      .login-form {
+      }
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+}

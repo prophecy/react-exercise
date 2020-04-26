@@ -4,7 +4,7 @@ class Description extends Component {
   state = {};
   render() {
     return (
-      <div className="description col-7">
+      <div className="description">
         <h1>Open source software to collaborate on code</h1>
         <p>
           Manage Git repositories with fine-grained access controls that keep

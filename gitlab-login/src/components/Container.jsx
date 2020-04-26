@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-import Title from "./Title";
 import Description from "./Description";
 import LoginBox from "./LoginBox";
 
@@ -9,9 +8,13 @@ class Container extends Component {
   render() {
     return (
       <div className="container">
-        <Title />
-        <Description />
-        <LoginBox />
+        <div className="title">
+          <h1>GitLab Community Edition</h1>
+        </div>
+        <div className="inner-content">
+          <Description />
+          <LoginBox />
+        </div>
       </div>
     );
   }

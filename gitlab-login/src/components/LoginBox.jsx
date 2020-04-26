@@ -8,7 +8,7 @@ class LoginBox extends Component {
   state = {};
   render() {
     return (
-      <div className="login-box col-4">
+      <div className="login-box">
         <div>
           <Tabs>
             <div label="LDAP">

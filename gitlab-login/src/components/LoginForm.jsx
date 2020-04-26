@@ -12,24 +12,38 @@ class LoginForm extends Component {
 
     if (this.state.isShowForgotPassword)
       forgetPasswordLink = (
-        <div>
+        <React.Fragment>
           <a href="http://google.com">Forgot your password?</a>
           <br />
-        </div>
+        </React.Fragment>
       );
 
     return (
       <div className="login-form">
-        <input id="username-input" type="text" name="name" />
-        <label htmlFor="username-input">{this.state.usernameInputLabel}</label>
-        <br />
-        <input id="password-input" type="password" name="password" />
-        <label htmlFor="password-input">{this.state.passwordInputLabel}</label>
-        <br />
+        <label htmlFor="username-input" className="login-element">
+          {this.state.usernameInputLabel}
+        </label>
+        <input
+          id="username-input"
+          className="login-element"
+          type="text"
+          name="name"
+        />
+        <label htmlFor="password-input" className="login-element">
+          {this.state.passwordInputLabel}
+        </label>
+        <input
+          id="password-input"
+          className="login-element"
+          type="password"
+          name="password"
+        />
         <input type="checkbox" id="remember-me" />
         <label htmlFor="checkbox">Remember me</label>
         {forgetPasswordLink}
-        <button id="sign-in-button">Sign in</button>
+        <label type="submit" id="sign-in-submit" className="login-element">
+          Sign in
+        </label>
       </div>
     );
   }

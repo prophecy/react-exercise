@@ -119,6 +119,32 @@
   border-width: 1px 1px 0 1px;
 }
 
+.container .inner-content .login-box .login-form {
+  width: 100%;
+}
+
+.container .inner-content .login-box .login-form .login-element {
+  display: inline-block;
+  width: 100%;
+}
+
+.container .inner-content .login-box .login-form label {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.container .inner-content .login-box .login-form a {
+  font-size: 16px;
+  float: right !important;
+  color: #1b69b6;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.container .inner-content .login-box .login-form input {
+  background-color: #45a049;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

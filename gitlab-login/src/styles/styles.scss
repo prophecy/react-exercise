@@ -105,6 +105,29 @@ $login-box-width: 100% - $description-width;
       }
 
       .login-form {
+        width: 100%;
+
+        .login-element {
+          display: inline-block;
+          width: 100%;
+        }
+
+        label {
+          font-size: 13px;
+          font-weight: bold;
+        }
+
+        a {
+          font-size: 16px;
+          float: right !important;
+          color: #1b69b6;
+          text-decoration: none;
+          font-size: 13px;
+        }
+
+        input {
+          background-color: #45a049;
+        }
       }
     }
   }

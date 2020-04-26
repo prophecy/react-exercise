@@ -25,7 +25,7 @@ class LoginForm extends Component {
         </label>
         <input
           id="username-input"
-          className="login-element"
+          className="input-text login-element"
           type="text"
           name="name"
         />
@@ -34,16 +34,19 @@ class LoginForm extends Component {
         </label>
         <input
           id="password-input"
-          className="login-element"
+          className="input-text login-element"
           type="password"
           name="password"
         />
         <input type="checkbox" id="remember-me" />
         <label htmlFor="checkbox">Remember me</label>
         {forgetPasswordLink}
-        <label type="submit" id="sign-in-submit" className="login-element">
-          Sign in
-        </label>
+        <input
+          type="submit"
+          value="Sign in"
+          id="sign-in-submit"
+          className="input input-submit login-element"
+        />
       </div>
     );
   }

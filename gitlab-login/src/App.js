@@ -8,11 +8,10 @@ import Container from "./components/Container";
 
 function App() {
   return (
-    <React.Fragment>
+    <div className="root">
       <Header />
       <Container />
-      <Footer />
-    </React.Fragment>
+    </div>
   );
 }
 

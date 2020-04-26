@@ -1,15 +1,16 @@
 /* Header and footer */
 
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   height: 60px;
 
-  background: #fff;
+  background: #ffffffff;
   border-bottom: 1px solid #f0f0f0;
   text-align: center;
+  z-index: 1030;
 
   .logo {
     height: 100%;
@@ -17,27 +18,7 @@
   }
 }
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: auto;
-
-  background: #fff;
-  text-align: left;
-  border-top: 1px solid #f0f0f0;
-
-  padding-left: 8px;
-
-  a {
-    font-size: 16px;
-    float: left !important;
-    color: #1b69b6;
-    text-decoration: none;
-    font-size: 14px;
-    margin: 24px 8px;
-  }
+.root {
 }
 
 /* Content */
@@ -51,133 +32,154 @@ $description-width: 60%;
 $login-box-width: 100% - $description-width;
 
 .container {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 10px;
-  padding-right: 10px;
+  .content {
+    padding: 30px;
+    margin-top: 120px;
+    float: top;
 
-  position: absolute;
-  top: 15%;
+    z-index: 100;
+    min-height: calc(100vh - 190px);
 
-  .title {
-    height: auto;
-    width: 100%;
-    margin: 0px 10px;
-
-    h1 {
-      margin: 0px 0px;
-      font-size: 36px;
-      font-weight: normal;
-    }
-  }
-
-  .inner-content {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
     @media (max-width: $mobile-width) {
-      flex-direction: column;
+      margin-top: 60px;
     }
 
-    .description {
-      float: left;
-      width: $description-width;
+    .title {
+      height: auto;
+      width: 100%;
       margin: 0px 10px;
-      order: 1;
-
-      @media (max-width: $mobile-width) {
-        width: 100%;
-        order: 2;
-      }
 
       h1 {
-        font-size: 22px;
-      }
-      p {
-        font-size: 16px;
-        color: #888888;
+        margin: 0px 0px;
+        font-size: 36px;
+        font-weight: normal;
       }
     }
 
-    .login-box {
-      width: $login-box-width;
-      float: left;
-      order: 2;
-
+    .inner-content {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
       @media (max-width: $mobile-width) {
-        width: 100%;
+        flex-direction: column;
+      }
+
+      .description {
+        float: left;
+        width: $description-width;
+        margin: 16px 10px;
         order: 1;
+
+        @media (max-width: $mobile-width) {
+          width: 100%;
+          order: 2;
+        }
+
+        h1 {
+          font-size: 22px;
+        }
+        p {
+          font-size: 16px;
+          color: #888888;
+        }
       }
 
-      .tab-list {
-        border-bottom: 1px solid #ccc;
-        padding-left: 0;
-      }
+      .login-box {
+        width: $login-box-width;
+        float: left;
+        order: 2;
 
-      .tab-list-item {
-        display: inline-block;
-        list-style: none;
-        margin-bottom: -1px;
-        padding: 0.5rem 0.75rem;
-        cursor: pointer;
-      }
+        @media (max-width: $mobile-width) {
+          width: 100%;
+          order: 1;
+        }
 
-      .tab-list-active {
-        background-color: white;
-        border: solid #ccc;
-        border-width: 1px 1px 0 1px;
-      }
+        .tab-list {
+          border-bottom: 1px solid #ccc;
+          padding-left: 0;
+        }
 
-      .login-form {
-        width: 100%;
-        box-shadow: 0 0 0 1px #e5e5e5;
-        border-bottom-right-radius: 0.25rem;
-        border-bottom-left-radius: 0.25rem;
-        padding: 15px;
-
-        .login-element {
+        .tab-list-item {
           display: inline-block;
-          width: 100%;
-        }
-
-        label {
-          font-size: 13px;
-          font-weight: bold;
-        }
-
-        a {
-          font-size: 16px;
-          float: right !important;
-          color: #1b69b6;
-          text-decoration: none;
-          font-size: 13px;
-          margin: 2px;
-        }
-
-        .input-text {
-          height: 32px;
-          margin: 8px 0px;
-        }
-
-        .input-submit {
-          background-color: #1aaa55;
-          border-color: #168f48;
-          color: white;
-          padding: 8px 8px;
-          border: none;
-          border-radius: 4px;
+          list-style: none;
+          margin-bottom: -1px;
+          padding: 0.5rem 0.75rem;
           cursor: pointer;
-          font-size: 16px;
-          width: 100%;
-          margin-top: 8px;
-          font-weight: bold;
+        }
 
-          &:hover {
-            background-color: #168f48;
-            border-color: #12753a;
+        .tab-list-active {
+          background-color: white;
+          border: solid #ccc;
+          border-width: 1px 1px 0 1px;
+        }
+
+        .login-form {
+          width: 100%;
+          box-shadow: 0 0 0 1px #e5e5e5;
+          border-bottom-right-radius: 0.25rem;
+          border-bottom-left-radius: 0.25rem;
+          padding: 15px;
+
+          .login-element {
+            display: inline-block;
+            width: 100%;
+          }
+
+          label {
+            font-size: 13px;
+            font-weight: bold;
+          }
+
+          a {
+            font-size: 16px;
+            float: right !important;
+            color: #1b69b6;
+            text-decoration: none;
+            font-size: 13px;
+            margin: 2px;
+          }
+
+          .input-text {
+            height: 32px;
+            margin: 8px 0px;
+          }
+
+          .input-submit {
+            background-color: #1aaa55;
+            border-color: #168f48;
+            color: white;
+            padding: 8px 8px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 8px;
+            font-weight: bold;
+
+            &:hover {
+              background-color: #168f48;
+              border-color: #12753a;
+            }
           }
         }
       }
+    }
+  }
+
+  .footer {
+    background: #fff;
+    text-align: left;
+    border-top: 1px solid #f0f0f0;
+    padding: 0px 8px;
+
+    a {
+      font-size: 16px;
+      float: left !important;
+      color: #1b69b6;
+      text-decoration: none;
+      font-size: 14px;
+      margin: 24px 8px;
     }
   }
 }

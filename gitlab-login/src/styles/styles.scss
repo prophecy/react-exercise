@@ -31,6 +31,8 @@ $mobile-width: $mobile-width-extra-small;
 $description-width: 60%;
 $login-box-width: 100% - $description-width;
 
+$footer-compensator: 190px;
+
 .container {
   .content {
     padding: 30px;
@@ -38,7 +40,7 @@ $login-box-width: 100% - $description-width;
     float: top;
 
     z-index: 100;
-    min-height: calc(100vh - 190px);
+    min-height: 100vh - $footer-compensator;
 
     @media (max-width: $mobile-width) {
       margin-top: 60px;
@@ -116,10 +118,11 @@ $login-box-width: 100% - $description-width;
           font-weight: normal;
           font-size: 16px;
           text-align: center;
+          border-bottom: 2px solid #fafafa;
 
           &:hover {
             color: black;
-            box-shadow: 0px 4px 4px #707070;
+            border-bottom: 2px solid #ccc;
           }
         }
 
@@ -129,6 +132,7 @@ $login-box-width: 100% - $description-width;
           color: black;
           font-weight: bold;
           text-align: center;
+          border-bottom: 2px solid #ccc;
         }
 
         .login-form {

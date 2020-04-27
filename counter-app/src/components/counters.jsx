@@ -11,16 +11,6 @@ class Counters extends Component {
     ],
   };
 
-  /*
-  constructor(props) {
-    super();
-
-    props.onChangedTotalCounter(() => {
-      this.state.counters.filter((c) => c.value > 0);
-    });
-  }
-  */
-
   handleReset = () => {
     const counters = this.state.counters.map((c) => {
       c.value = 0;
@@ -29,12 +19,20 @@ class Counters extends Component {
     this.setState({ counters });
   };
 
-  handleIncrement = (counter) => {
+  handleCounterChange = (counter, delta) => {
     const counters = [...this.state.counters];
     const index = counters.indexOf(counter);
     counters[index] = { ...counter };
-    counters[index].value++;
+    counters[index].value += delta;
     this.setState({ counters });
+  };
+
+  handleIncrement = (counter) => {
+    this.handleCounterChange(counter, 1);
+  };
+
+  handleDecrement = (counter) => {
+    if (counter.value > 0) this.handleCounterChange(counter, -1);
   };
 
   handleDelete = (counterId) => {
@@ -63,6 +61,7 @@ class Counters extends Component {
             counter={counter}
             onDelete={this.handleDelete}
             onIncrement={this.handleIncrement}
+            onDecrement={this.handleDecrement}
           />
         ))}
       </div>

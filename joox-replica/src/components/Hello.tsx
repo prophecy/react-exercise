@@ -13,7 +13,7 @@ const Hello: React.SFC<HelloProps> = () => {
   return useObserver(() => {
     return (
       <div>
-        <h1>{store.helloText}</h1>
+        <h1>{store.getHelloText()}</h1>
       </div>
     );
   });

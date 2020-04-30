@@ -1,7 +1,5 @@
-import { TCityList } from "../models/cityModel";
+import * as data from "./data";
 
-export const cityList: TCityList = [
-  { code: "am", name: "Amsterdam" },
-  { code: "ld", name: "London" },
-  { code: "mr", name: "Madrid" },
-];
+export const initMockData = () => {
+  data.setHelloText("Hello Joox, replica");
+};

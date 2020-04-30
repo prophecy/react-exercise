@@ -1,15 +1,8 @@
-import { TCityList } from "../models/cityModel";
-import * as md from "./mockData";
+import { observable } from "mobx";
 
-// ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
-// Data
-
-export let helloJooxReplica: String = "Hello, Joox replica";
-export let cityList: TCityList = [];
-
-// ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
-// Mock data
-
-export const initMockData = () => {
-  cityList = md.cityList;
+const data = {
+  helloJooxReplica: observable.box(""),
 };
+
+export const getHelloText = () => data.helloJooxReplica.get();
+export const setHelloText = (text: string) => data.helloJooxReplica.set(text);

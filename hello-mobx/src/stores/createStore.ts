@@ -1,3 +1,6 @@
+// Modify from this tutorial
+// Ref: https://blog.mselee.com/posts/2019/06/08/using-mobx-with-react-hooks-typescript/
+
 import { observable } from "mobx";
 import { cityList, initMockData } from "./data/data";
 

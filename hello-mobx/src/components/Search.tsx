@@ -2,15 +2,17 @@ import React from "react";
 import { useObserver } from "mobx-react";
 import { storeContext } from "../stores/context";
 
-import { City } from "./City";
-
-export const CityList = () => {
+const Search: React.FC = () => {
   const store = React.useContext(storeContext);
   if (!store) throw Error("Store shouldn't be null");
 
+  const { query, setQuery } = store;
+
   return useObserver(() => {
-    return <City cities={store.filteredCities} />;
+    return (
+      <input value={query.get()} onChange={(e) => setQuery(e.target.value)} />
+    );
   });
 };
 
-export default CityList;
+export default Search;

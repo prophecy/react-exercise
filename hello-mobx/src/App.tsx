@@ -2,6 +2,7 @@ import React, { Children } from "react";
 import StoreProvider from "./stores/context";
 import "./App.css";
 
+import Search from "./components/Search";
 import CityList from "./components/CityList";
 
 const App: React.FC = () => {
@@ -9,6 +10,7 @@ const App: React.FC = () => {
     <StoreProvider>
       <div className="App">
         <header className="App-header">
+          <Search />
           <CityList />
         </header>
       </div>

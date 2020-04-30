@@ -1,8 +1,12 @@
-import { observable } from "mobx";
+import { observable, computed } from "mobx";
 
-const data = {
-  helloJooxReplica: observable.box(""),
-};
+// State
+const helloText = observable.box("");
 
-export const getHelloText = () => data.helloJooxReplica.get();
-export const setHelloText = (text: string) => data.helloJooxReplica.set(text);
+export const getHelloText = () => helloText.get();
+export const setHelloText = (text: string) => helloText.set(text);
+
+// Compute
+const upHelloText = computed(() => helloText.get().toUpperCase());
+
+export const getUpHelloText = () => upHelloText.get();

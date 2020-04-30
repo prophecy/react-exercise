@@ -14,6 +14,7 @@ const Hello: React.SFC<HelloProps> = () => {
     return (
       <div>
         <h1>{store.getHelloText()}</h1>
+        <h2>{store.getUpHelloText()}</h2>
       </div>
     );
   });

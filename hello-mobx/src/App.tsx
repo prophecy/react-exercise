@@ -1,5 +1,5 @@
 import React, { Children } from "react";
-import StoreProvider from "./stores/context";
+import StoreContextProvider from "./stores/StoreContextProvider";
 import "./App.css";
 
 import Search from "./components/Search";
@@ -7,14 +7,14 @@ import CityList from "./components/CityList";
 
 const App: React.FC = () => {
   return (
-    <StoreProvider>
+    <StoreContextProvider>
       <div className="App">
         <header className="App-header">
           <Search />
           <CityList />
         </header>
       </div>
-    </StoreProvider>
+    </StoreContextProvider>
   );
 };
 

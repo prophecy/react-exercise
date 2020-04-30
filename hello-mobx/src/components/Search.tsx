@@ -1,6 +1,6 @@
 import React from "react";
 import { useObserver } from "mobx-react";
-import { storeContext } from "../stores/context";
+import { storeContext } from "../stores/StoreContextProvider";
 
 const Search: React.FC = () => {
   const store = React.useContext(storeContext);

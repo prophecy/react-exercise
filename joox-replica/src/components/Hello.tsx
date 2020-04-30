@@ -11,7 +11,11 @@ const Hello: React.SFC<HelloProps> = () => {
   if (!store) throw Error("Store shouldn't be null");
 
   return useObserver(() => {
-    return <h1>{store.helloText}</h1>;
+    return (
+      <div>
+        <h1>{store.helloText}</h1>
+      </div>
+    );
   });
 };
 

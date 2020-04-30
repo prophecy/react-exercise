@@ -1,13 +1,21 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import TestCom from "./components/testCom";
+import "./styles/styles.scss";
+
+import StoreContextProvider from "./stores/StoreContextProvider";
+
+import Hello from "./components/Hello";
 
 function App() {
   return (
-    <div>
-      <TestCom />
-    </div>
+    <StoreContextProvider>
+      <div>
+        <h1>
+          <Hello />
+        </h1>
+      </div>
+    </StoreContextProvider>
   );
 }
 

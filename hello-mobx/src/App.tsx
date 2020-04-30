@@ -1,8 +1,8 @@
 import React, { Children } from "react";
-import StoreProvider from "./context";
+import StoreProvider from "./stores/context";
 import "./App.css";
 
-import CityList from "./city";
+import CityList from "./components/CityList";
 
 const App: React.FC = () => {
   return (

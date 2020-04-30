@@ -10,7 +10,7 @@ export const createStore = () => {
 
   const store = {
     query: observable.box(""),
-    hello: observable.box(""),
+    hello: observable.box("Hello, Store !!!!"),
 
     setQuery(query: string) {
       store.query.set(query.toLowerCase());

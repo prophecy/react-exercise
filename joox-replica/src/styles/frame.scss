@@ -5,15 +5,8 @@ header {
   top: 0px;
   background-color: $headerBgColor;
   z-index: $headerZIndex;
-}
-
-footer {
-  position: fixed;
-  width: 100%;
-  height: $footerHeight;
-  bottom: 0px;
-  background-color: $footerBgColor;
-  z-index: $footerZIndex;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px 24px;
 }
 
 .side-bar {
@@ -23,6 +16,15 @@ footer {
   width: $sideBarWidth;
   bottom: $footerHeight;
   background-color: $sideBarBgColor;
-
+  box-shadow: 1px 0 1px 0 rgba(0, 0, 0, 0.2);
   z-index: $sideBarZIndex;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  height: $footerHeight;
+  bottom: 0px;
+  background-color: $footerBgColor;
+  z-index: $footerZIndex;
 }

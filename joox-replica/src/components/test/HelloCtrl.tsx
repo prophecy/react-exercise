@@ -1,5 +1,5 @@
 import React from "react";
-import { storeContext } from "../stores/StoreContextProvider";
+import { storeContext } from "../../stores/StoreContextProvider";
 
 export interface HelloCtrlProps {}
 

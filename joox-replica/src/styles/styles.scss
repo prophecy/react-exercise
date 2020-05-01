@@ -1,2 +1,7 @@
 @import "./defines.scss";
 @import "./frame.scss";
+@import "./content.scss";
+
+body {
+  background-color: $bodyBgColor;
+}

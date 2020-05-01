@@ -1,0 +1,20 @@
+$bannerCarouselHeight: 80px;
+
+.content {
+  position: relative;
+  left: $sideBarWidth;
+  width: calc(100vw - #{$sideBarWidth});
+  top: $headerHeight;
+  min-height: calc(100vh - #{$headerHeight} - #{$footerHeight});
+
+  background-color: $contentBgColor;
+  margin-bottom: $footerHeight;
+
+  z-index: $contentZIndex;
+}
+
+.banner-carousel {
+  position: relative;
+  width: 100%;
+  height: $bannerCarouselHeight;
+}

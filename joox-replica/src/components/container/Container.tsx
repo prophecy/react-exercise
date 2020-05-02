@@ -4,6 +4,9 @@ import ContentSection from "./ContentSection";
 import CarouselLarge from "./CarouselLarge";
 import CarouselMedium from "./CarouselMedium";
 import CarouselArtist from "./CarouselArtist";
+import RoutableSection from "./RoutableSection";
+import ButtonPanelLarge from "./ButtonPanelLarge";
+import ButtonPanelMedium from "./ButtonPanelMedium";
 
 export interface ContainerProps {}
 
@@ -11,9 +14,9 @@ const Container: React.SFC<ContainerProps> = () => {
   return (
     <div className="container">
       <Banner />
-      <ContentSection title="ชาร์ตเพลงฮิต">
+      <RoutableSection title="ชาร์ตเพลงฮิต">
         <CarouselMedium />
-      </ContentSection>
+      </RoutableSection>
       <ContentSection title="เพลงใหม่">
         <CarouselArtist />
       </ContentSection>
@@ -29,9 +32,19 @@ const Container: React.SFC<ContainerProps> = () => {
       <ContentSection title="คลาสสิคอัลบั้ม">
         <CarouselArtist />
       </ContentSection>
-      <ContentSection title="คอลัมน์เพลง">
+      <RoutableSection title="คอลัมน์เพลง">
         <CarouselLarge />
-      </ContentSection>
+      </RoutableSection>
+
+      <RoutableSection title="คอลัมน์เพลง">
+        <CarouselLarge />
+      </RoutableSection>
+      <RoutableSection title="แนวเพลง">
+        <ButtonPanelLarge />
+      </RoutableSection>
+      <RoutableSection title="ลิสต์เพลง">
+        <ButtonPanelMedium />
+      </RoutableSection>
     </div>
   );
 };

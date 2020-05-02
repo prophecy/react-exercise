@@ -8,34 +8,9 @@ const Hello: React.SFC<HelloProps> = () => {
   const store = React.useContext(storeContext);
 
   return useObserver(() => {
-    return <div></div>;
-    /*
-    return (
-      <div className="test-area">
-        <h1>{store?.getHelloText()}</h1>
-        <h2>{store?.getUpHelloText()}</h2>
-        <h1>{store?.getHelloText()}</h1>
-        <h1>{store?.getHelloText()}</h1>
-        <h1>{store?.getHelloText()}</h1>
-        <h1>{store?.getHelloText()}</h1>
-        <h1>{store?.getHelloText()}</h1>
-        <h1>{store?.getHelloText()}</h1>
-        <h1>{store?.getHelloText()}</h1>
-        <h1>{store?.getHelloText()}</h1>
-        <h1>{store?.getHelloText()}</h1>
-        <h1>{store?.getHelloText()}</h1>
-        <h1>{store?.getHelloText()}</h1>
-        <h1>{store?.getHelloText()}</h1>
-        <h1>{store?.getHelloText()}</h1>
-        <h1>{store?.getHelloText()}</h1>
-        <h1>{store?.getHelloText()}</h1>
-        <h1>{store?.getHelloText()}</h1>
-        <h1>{store?.getHelloText()}</h1>
-        <h1>{store?.getHelloText()}</h1>
-        <h1>{store?.getHelloText()}</h1>
-      </div>
-    );
-    */
+    console.log(storeContext);
+
+    return <div>{store?.viewModel.mainPage.content.sectionList.length}</div>;
   });
 };
 

@@ -10,47 +10,70 @@ import ButtonPanelMedium from "./ButtonPanelMedium";
 import Expander from "./Expander";
 import Sitemap from "./Sitemap";
 
-export interface ContainerProps {}
+import { storeContext } from "../../stores/StoreContextProvider";
+import {
+  SectionBanner,
+  HitChart,
+  MusicPack,
+  Genre,
+  SongColumn,
+  MusicList,
+  SiteMap,
+} from "../../stores/data/viewModel";
 
+export interface ContainerProps {}
 const Container: React.SFC<ContainerProps> = () => {
-  return (
-    <div className="container">
-      <CarouselBanner />
-      <RoutableSection title="ชาร์ตเพลงฮิต">
-        <CarouselMedium />
-      </RoutableSection>
-      <ContentSection title="เพลงใหม่">
-        <CarouselArtist />
-      </ContentSection>
-      <ContentSection title="พอดแคสต์">
-        <CarouselArtist />
-      </ContentSection>
-      <ContentSection title="ลูกทุ่งฮิตติดชาร์ต">
-        <CarouselArtist />
-      </ContentSection>
-      <ContentSection title="เพลง | อัลบั้ม ใหม่ล่าสุด">
-        <CarouselArtist />
-      </ContentSection>
-      <ContentSection title="คลาสสิคอัลบั้ม">
-        <CarouselArtist />
-      </ContentSection>
-      <RoutableSection title="คอลัมน์เพลง">
-        <CarouselLarge />
-      </RoutableSection>
-      <RoutableSection title="คอลัมน์เพลง">
-        <CarouselLarge />
-      </RoutableSection>
-      <RoutableSection title="แนวเพลง">
-        <ButtonPanelLarge />
-      </RoutableSection>
-      <RoutableSection title="ลิสต์เพลง">
-        <ButtonPanelMedium />
-      </RoutableSection>
-      <Expander expandedTitle="ปิด sitemap" collapsedTitle="แสดง sitemap">
-        <Sitemap />
-      </Expander>
-    </div>
-  );
+  const store = React.useContext(storeContext);
+
+  const itemList = () => {
+    return store?.viewModel.mainPage.content.sectionList.map((item, i) => {
+      if (item.constructor.name === SectionBanner.name) {
+        return <CarouselBanner key={i} />;
+      } else if (item.constructor.name === HitChart.name) {
+        return (
+          <RoutableSection key={i} title="ชาร์ตเพลงฮิต">
+            <CarouselMedium />
+          </RoutableSection>
+        );
+      } else if (item.constructor.name === MusicPack.name) {
+        return (
+          <ContentSection key={i} title="ลูกทุ่งฮิตติดชาร์ต">
+            <CarouselArtist />
+          </ContentSection>
+        );
+      } else if (item.constructor.name === Genre.name) {
+        return (
+          <RoutableSection key={i} title="แนวเพลง">
+            <ButtonPanelLarge />
+          </RoutableSection>
+        );
+      } else if (item.constructor.name === SongColumn.name) {
+        return (
+          <RoutableSection key={i} title="แนวเพลง">
+            <CarouselLarge />
+          </RoutableSection>
+        );
+      } else if (item.constructor.name === MusicList.name) {
+        return (
+          <RoutableSection key={i} title="ลิสต์เพลง">
+            <ButtonPanelMedium />
+          </RoutableSection>
+        );
+      } else if (item.constructor.name === SiteMap.name) {
+        return (
+          <Expander
+            key={i}
+            expandedTitle="ปิด sitemap"
+            collapsedTitle="แสดง sitemap"
+          >
+            <Sitemap />
+          </Expander>
+        );
+      }
+    });
+  };
+
+  return <div className="container">{itemList()}</div>;
 };
 
 export default Container;

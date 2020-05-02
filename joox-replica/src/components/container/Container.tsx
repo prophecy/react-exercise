@@ -31,31 +31,31 @@ const Container: React.SFC<ContainerProps> = () => {
         return <CarouselBanner key={i} />;
       } else if (item.constructor.name === HitChart.name) {
         return (
-          <RoutableSection key={i} title="ชาร์ตเพลงฮิต">
+          <RoutableSection key={i} title={item.title}>
             <CarouselMedium />
           </RoutableSection>
         );
       } else if (item.constructor.name === MusicPack.name) {
         return (
-          <ContentSection key={i} title="ลูกทุ่งฮิตติดชาร์ต">
+          <ContentSection key={i} title={item.title}>
             <CarouselArtist />
           </ContentSection>
         );
       } else if (item.constructor.name === Genre.name) {
         return (
-          <RoutableSection key={i} title="แนวเพลง">
+          <RoutableSection key={i} title={item.title}>
             <ButtonPanelLarge />
           </RoutableSection>
         );
       } else if (item.constructor.name === SongColumn.name) {
         return (
-          <RoutableSection key={i} title="แนวเพลง">
+          <RoutableSection key={i} title={item.title}>
             <CarouselLarge />
           </RoutableSection>
         );
       } else if (item.constructor.name === MusicList.name) {
         return (
-          <RoutableSection key={i} title="ลิสต์เพลง">
+          <RoutableSection key={i} title={item.title}>
             <ButtonPanelMedium />
           </RoutableSection>
         );

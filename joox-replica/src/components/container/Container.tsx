@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import Banner from "./Banner";
 import ContentSection from "./ContentSection";
 import CarouselLarge from "./CarouselLarge";
@@ -7,6 +7,7 @@ import CarouselArtist from "./CarouselArtist";
 import RoutableSection from "./RoutableSection";
 import ButtonPanelLarge from "./ButtonPanelLarge";
 import ButtonPanelMedium from "./ButtonPanelMedium";
+import Expander from "./Expander";
 
 export interface ContainerProps {}
 
@@ -45,6 +46,16 @@ const Container: React.SFC<ContainerProps> = () => {
       <RoutableSection title="ลิสต์เพลง">
         <ButtonPanelMedium />
       </RoutableSection>
+      <Expander
+        expandedTitle="ปิด sitemap"
+        collapsedTitle="แสดง sitemap"
+        handleExpand={() => {
+          console.log("h.ex");
+        }}
+        handleCollapse={() => {
+          console.log("h.col");
+        }}
+      />
     </div>
   );
 };

@@ -8,6 +8,8 @@ const Hello: React.SFC<HelloProps> = () => {
   const store = React.useContext(storeContext);
 
   return useObserver(() => {
+    return <div></div>;
+    /*
     return (
       <div className="test-area">
         <h1>{store?.getHelloText()}</h1>
@@ -33,6 +35,7 @@ const Hello: React.SFC<HelloProps> = () => {
         <h1>{store?.getHelloText()}</h1>
       </div>
     );
+    */
   });
 };
 

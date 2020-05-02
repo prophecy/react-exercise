@@ -14,11 +14,9 @@ class Expander extends React.Component<ExpanderProps, ExpanderState> {
 
   handleExpand = () => {
     this.setState({ isExpanded: true });
-    console.log("expanded");
   };
   handleCollapse = () => {
     this.setState({ isExpanded: false });
-    console.log("collapsed");
   };
 
   render() {

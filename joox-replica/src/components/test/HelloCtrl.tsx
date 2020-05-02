@@ -6,6 +6,8 @@ export interface HelloCtrlProps {}
 const HelloCtrl: React.SFC<HelloCtrlProps> = () => {
   const store = React.useContext(storeContext);
 
+  return <div></div>;
+  /*
   return (
     <div>
       <button onClick={() => store?.setHelloText("Welcome!")}>
@@ -16,6 +18,7 @@ const HelloCtrl: React.SFC<HelloCtrlProps> = () => {
       </button>
     </div>
   );
+  */
 };
 
 export default HelloCtrl;

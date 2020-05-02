@@ -1,5 +1,5 @@
 import React from "react";
-import Banner from "./Banner";
+import CarouselBanner from "./CarouselBanner";
 import ContentSection from "./ContentSection";
 import CarouselLarge from "./CarouselLarge";
 import CarouselMedium from "./CarouselMedium";
@@ -15,7 +15,7 @@ export interface ContainerProps {}
 const Container: React.SFC<ContainerProps> = () => {
   return (
     <div className="container">
-      <Banner />
+      <CarouselBanner />
       <RoutableSection title="ชาร์ตเพลงฮิต">
         <CarouselMedium />
       </RoutableSection>

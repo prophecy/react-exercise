@@ -1,18 +1,27 @@
-.banner-carousal {
+.container {
   position: relative;
-  width: 100%;
-  height: 300px;
-  padding: 20px 0px;
-  background-color: mediumorchid;
-  background-clip: content-box;
+  left: $sideBarWidth;
+  width: calc(100% - #{$sideBarWidth});
+  top: $headerHeight;
+  min-height: calc(100vh - #{$headerHeight} - #{$footerHeight});
+
+  background-color: $contentBgColor;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: $footerHeight;
+
+  z-index: $contentZIndex;
+
+  flex-direction: column;
 }
 
 .section {
   position: relative;
   display: block;
+  margin-left: 0px;
+  margin-right: 0px;
 
   div {
-    width: 100%;
     display: block;
     text-align: center;
     margin: 25px 0px;
@@ -35,7 +44,17 @@
 }
 
 .carousel {
+  position: relative;
   width: 100%;
+  box-sizing: border-box;
+}
+
+.carousal-banner {
+  position: relative;
+  height: 300px;
+  padding: 20px 0px;
+  background-color: mediumorchid;
+  background-clip: content-box;
 }
 
 .carousel-large {
@@ -44,6 +63,7 @@
 }
 
 .carousel-medium {
+  padding: 0px;
   height: 120px;
   background-color: navy;
 }
@@ -54,7 +74,6 @@
 }
 
 .button-panel {
-  width: 100%;
   height: 100px;
 }
 
@@ -67,7 +86,6 @@
 }
 
 .expander {
-  width: 100%;
   height: 46px;
   min-height: 66px;
   border-top: 1px solid rgb(55, 55, 55);
@@ -94,7 +112,6 @@
 }
 
 .sitemap {
-  width: 100%;
   height: 300px;
   background-color: gray;
 }

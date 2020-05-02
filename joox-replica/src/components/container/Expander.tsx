@@ -3,8 +3,6 @@ import React from "react";
 export interface ExpanderProps {
   expandedTitle: string;
   collapsedTitle: string;
-  handleExpand: any;
-  handleCollapse: any;
 }
 
 export interface ExpanderState {
@@ -15,26 +13,31 @@ class Expander extends React.Component<ExpanderProps, ExpanderState> {
   state = { isExpanded: false };
 
   handleExpand = () => {
-    this.props.handleExpand();
     this.setState({ isExpanded: true });
+    console.log("expanded");
   };
   handleCollapse = () => {
-    this.props.handleCollapse();
     this.setState({ isExpanded: false });
+    console.log("collapsed");
   };
 
   render() {
     return (
       <div className="expander">
-        <button
-          onClick={() =>
-            this.state.isExpanded ? this.handleCollapse() : this.handleExpand()
-          }
-        >
-          {this.state.isExpanded
-            ? this.props.expandedTitle
-            : this.props.collapsedTitle}
-        </button>
+        <div>
+          <button
+            onClick={() =>
+              this.state.isExpanded
+                ? this.handleCollapse()
+                : this.handleExpand()
+            }
+          >
+            {this.state.isExpanded
+              ? this.props.expandedTitle
+              : this.props.collapsedTitle}
+          </button>
+        </div>
+        {this.state.isExpanded ? this.props.children : ""}
       </div>
     );
   }

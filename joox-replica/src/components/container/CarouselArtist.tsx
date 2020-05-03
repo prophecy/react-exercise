@@ -13,7 +13,6 @@ export interface CarouselAristProps {}
 const CarouselArist: React.SFC<CarouselAristProps> = () => {
   return (
     <div className="carousel carousel-artist">
-      {" "}
       <CarouselProvider
         naturalSlideWidth={100}
         naturalSlideHeight={125}

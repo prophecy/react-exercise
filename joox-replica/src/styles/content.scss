@@ -62,10 +62,13 @@
 
 .carousal-banner {
   position: relative;
-  height: 300px;
   padding: 20px 0px;
-  background-color: mediumorchid;
+  //background-color: mediumorchid;
   background-clip: content-box;
+
+  .carousel-image {
+    width: 100%;
+  }
 }
 
 .carousel-large {

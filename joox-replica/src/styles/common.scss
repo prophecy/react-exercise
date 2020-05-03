@@ -1,0 +1,96 @@
+$logoWidth: 120px;
+
+.logo-wrap {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  width: $logoWidth;
+  height: 100%;
+}
+
+.logo {
+  display: block;
+  height: 100%;
+  width: $logoWidth;
+  background-image: url(../images/joox-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.form-wrap {
+  width: 100%;
+}
+
+.form-expand {
+  position: relative;
+  display: block;
+  height: 35px;
+  width: 100%;
+  font-size: 0.875rem;
+  color: rgb(74, 74, 74);
+  text-align: left;
+  background: rgba(255, 255, 255, 0.8);
+  //padding: 0px 40px 0px 15px;
+  outline: none;
+  //border-width: 1px;
+  //border-style: solid;
+  //border-color: rgba(255, 255, 255, 0.1);
+  //border-image: initial;
+  margin: 0px 12px;
+}
+
+.btn-download-wrap {
+  padding-left: 10px;
+  margin-left: 40px;
+  //border-left: 1px solid rgb(74, 74, 74);
+}
+
+.btn-wrap {
+  padding-left: 10px;
+  margin-left: 10px;
+  border-left: 1px solid rgb(74, 74, 74);
+}
+
+.btn-round {
+  border-radius: 50%;
+}
+
+.btn-green {
+  color: rgb(0, 0, 0);
+  background: rgb(9, 222, 110);
+  border-color: rgb(9, 222, 110);
+}
+
+.btn-silhouette {
+  color: rgb(229, 229, 229);
+  background: transparent;
+  border-color: rgb(188, 188, 188);
+}
+
+.btn-download {
+  min-width: 200px;
+}
+
+.btn-login .btn-register {
+  min-width: 100px;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.8;
+  letter-spacing: 0.41px;
+  text-align: center;
+  height: 38px;
+  cursor: pointer;
+  white-space: pre;
+  border-width: 1px;
+  border-style: solid;
+  border-image: initial;
+  border-radius: 20px;
+  padding: 7px 20px 5px;
+  outline: none;
+  transition: all 0.35s ease 0s;
+}

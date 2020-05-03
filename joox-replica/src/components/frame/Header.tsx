@@ -21,7 +21,7 @@ const Header: React.SFC<HeaderProps> = () => {
       </div>
       <div className="btn-download-wrap">
         <button className="btn btn-round btn-green btn-download">
-          โหลดแอป JOOX บนพีซี
+          โหลดแอป JOOX บนพีซี <i className="fa fa-download"></i>
         </button>
       </div>
       <div className="btn-wrap">

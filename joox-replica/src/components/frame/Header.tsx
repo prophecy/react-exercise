@@ -14,11 +14,10 @@ const Header: React.SFC<HeaderProps> = () => {
       <div className="form-wrap">
         <form>
           <input
+            className="form-expand"
             type="text"
             placeholder="ค้นหาเพลง ศิลปิน อัลบัม และเพลย์ลิสต์"
             autoComplete="off"
-            className="form-expand"
-            value=""
           />
         </form>
       </div>

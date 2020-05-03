@@ -37,6 +37,13 @@
 
     .routable {
       cursor: pointer;
+      a {
+        color: white;
+        text-decoration: none;
+        &:hover {
+          color: rgb(9, 222, 110);
+        }
+      }
     }
   }
 }

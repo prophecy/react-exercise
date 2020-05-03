@@ -7,6 +7,8 @@ import CarouselArtist from "./CarouselArtist";
 import RoutableSection from "./RoutableSection";
 import ButtonPanelLarge from "./ButtonPanelLarge";
 import ButtonPanelMedium from "./ButtonPanelMedium";
+import Charts from "../Charts";
+
 import Expander from "./Expander";
 import Sitemap from "./Sitemap";
 
@@ -20,6 +22,8 @@ import {
   MusicList,
   SiteMap,
 } from "../../stores/data/viewModel";
+
+import { Route, Switch, Redirect } from "react-router-dom";
 
 export interface ContainerProps {}
 const Container: React.SFC<ContainerProps> = () => {
@@ -73,7 +77,19 @@ const Container: React.SFC<ContainerProps> = () => {
     });
   };
 
-  return <div className="container">{itemList()}</div>;
+  return (
+    <Switch>
+      <Route
+        path="/charts"
+        render={(props) => <div className="container">{<Charts />}</div>}
+      />
+      <Route
+        path="/"
+        render={(props) => <div className="container">{itemList()}</div>}
+      ></Route>
+      ;
+    </Switch>
+  );
 };
 
 export default Container;

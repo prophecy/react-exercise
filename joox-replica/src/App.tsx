@@ -24,7 +24,6 @@ function App() {
           <Route path="/not-found" component={NotFound} />
           <Route
             path="/"
-            exact
             render={(props) => (
               <div>
                 <Header />

@@ -25,14 +25,18 @@ const Header: React.SFC<HeaderProps> = () => {
         </button>
       </div>
       <div className="btn-wrap">
-        <button className="btn btn-round btn-silhouette btn-login">
-          เข้าสู่ระบบ
-        </button>
+        <form action="/login">
+          <button className="btn btn-round btn-silhouette btn-login">
+            เข้าสู่ระบบ
+          </button>
+        </form>
       </div>
       <div className="btn-wrap">
-        <button className="btn btn-round btn-silhouette bton-register">
-          สมัครสมาชิก
-        </button>
+        <form action="/register">
+          <button className="btn btn-round btn-silhouette bton-register">
+            สมัครสมาชิก
+          </button>
+        </form>
       </div>
     </header>
   );

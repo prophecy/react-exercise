@@ -11,7 +11,9 @@ const RoutableSection: React.SFC<RoutableSectionProps> = ({
   return (
     <div className="section routable-section">
       <div>
-        <span className="section-title">{title}</span>
+        <span className="section-title">
+          {title} <i className="fa fa-angle-right"></i>
+        </span>
       </div>
       {children}
     </div>

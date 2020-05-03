@@ -1,4 +1,10 @@
-$logoWidth: 120px;
+$logoWidth: 100px;
+
+.hamburger {
+  color: rgb(155, 155, 155);
+  font-size: 24px;
+  padding-right: 24px;
+}
 
 .logo-wrap {
   display: flex;

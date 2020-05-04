@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import Carousel from "@brainhubeu/react-carousel";
+import Carousel, { Dots } from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
 
 export interface CarouselBannerProps {}
@@ -11,10 +11,11 @@ class CarouselBanner extends React.Component<
   CarouselBannerProps,
   CarouselBannerState
 > {
-  state = { isSingle: Boolean, urlList: Array<string>() };
+  state = { isSingle: Boolean, urlList: Array<string>(), value: 0 };
 
   constructor(props: CarouselBannerProps) {
     super(props);
+    this.onchange = this.onchange.bind(this);
   }
 
   componentDidMount() {
@@ -28,26 +29,33 @@ class CarouselBanner extends React.Component<
     });
   }
 
-  getSingleSlide = () => (
-    <Carousel infinite>
-      {this.state.urlList.map((item, i) => (
-        <img key={i} src={item} />
-      ))}
-    </Carousel>
-  );
+  onchange(value: number) {
+    this.setState({ value });
+  }
 
-  getThreeSides = () => (
-    <Carousel centered infinite arrows slidesPerPage={2}>
-      {this.state.urlList.map((item, i) => (
-        <img key={i} src={item} />
-      ))}
+  getItemList = () =>
+    this.state.urlList.map((item, i) => <img key={i} src={item} />);
+
+  getSingleSlide = () => (
+    <Carousel
+      infinite
+      value={this.state.value}
+      //slides={this.getItemList()}
+      onChange={this.onchange}
+    >
+      {this.getItemList()}
     </Carousel>
   );
 
   render() {
     return (
       <div className="carousel carousal-banner">
-        {this.state.isSingle ? this.getSingleSlide() : this.getThreeSides()}
+        {this.getSingleSlide()}
+        <Dots
+          value={this.state.value}
+          onChange={this.onchange}
+          number={this.state.urlList.length}
+        />
       </div>
     );
   }

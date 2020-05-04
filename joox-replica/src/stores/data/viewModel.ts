@@ -74,6 +74,9 @@ export const viewModel = observable({
       sectionList: new Array<any>(),
     },
   },
+  playList: {
+    highlight: "",
+  },
 });
 
 export default viewModel;

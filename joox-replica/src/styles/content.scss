@@ -69,6 +69,29 @@
     width: 100%;
     margin: 0px 16px;
   }
+
+  .content {
+  }
+
+  .dots {
+    position: relative;
+    z-index: 100000;
+    bottom: 24px;
+
+    .BrainhubCarousel__dot {
+      padding: 3px;
+    }
+
+    .BrainhubCarousel__dot:before {
+      background: white;
+      width: 8px;
+      height: 8px;
+    }
+
+    .BrainhubCarousel__dot--selected {
+      color: white;
+    }
+  }
 }
 
 .carousel-large {

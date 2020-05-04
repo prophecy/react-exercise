@@ -40,6 +40,8 @@ class CarouselBanner extends React.Component<
     <Carousel
       infinite
       value={this.state.value}
+      autoPlay={2000}
+      animationSpeed={1000}
       //slides={this.getItemList()}
       onChange={this.onchange}
     >
@@ -50,12 +52,14 @@ class CarouselBanner extends React.Component<
   render() {
     return (
       <div className="carousel carousal-banner">
-        {this.getSingleSlide()}
-        <Dots
-          value={this.state.value}
-          onChange={this.onchange}
-          number={this.state.urlList.length}
-        />
+        <div className="content">{this.getSingleSlide()}</div>
+        <div className="dots">
+          <Dots
+            value={this.state.value}
+            onChange={this.onchange}
+            number={this.state.urlList.length}
+          />
+        </div>
       </div>
     );
   }

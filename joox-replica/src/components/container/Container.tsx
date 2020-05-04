@@ -82,7 +82,7 @@ const Container: React.SFC<ContainerProps> = () => {
   return (
     <Switch>
       <Route
-        path="/playlist"
+        path="/playlist/:id"
         render={(props) => <div className="container">{<PlayList />}</div>}
       />
       <Route

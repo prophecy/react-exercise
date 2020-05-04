@@ -3,8 +3,6 @@ import * as React from "react";
 import Carousel, { Dots } from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
 
-import { storeContext } from "../../stores/StoreContextProvider";
-
 import { SectionBanner } from "../../stores/data/viewModel";
 
 export interface CarouselBannerProps {

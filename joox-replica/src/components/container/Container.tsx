@@ -42,7 +42,7 @@ const Container: React.SFC<ContainerProps> = () => {
       } else if (item.constructor.name === MusicPack.name) {
         return (
           <ContentSection key={i} title={item.title}>
-            <CarouselArtist />
+            <CarouselArtist viewModel={item} />
           </ContentSection>
         );
       } else if (item.constructor.name === Genre.name) {

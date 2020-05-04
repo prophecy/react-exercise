@@ -67,7 +67,6 @@
 
   img {
     width: 100%;
-    //margin: 0px 16px;
   }
 
   .prev {
@@ -160,7 +159,34 @@
 
 .carousel-artist {
   height: 222px;
-  background-color: pink;
+  background-color: transparent;
+
+  .BrainhubCarousel__trackContainer {
+    margin: 0px;
+  }
+
+  .artist-container {
+    margin: 0px;
+    height: 222px;
+
+    img {
+      margin: 0px;
+      height: 169px;
+    }
+
+    a {
+      font-size: 0.875rem;
+      color: #bcbcbc;
+      cursor: pointer;
+      -webkit-transition: color 0.2s;
+      transition: color 0.2s;
+      display: block;
+      line-height: 22px;
+      max-height: 43px;
+      overflow: hidden;
+      margin: 2px 0px;
+    }
+  }
 }
 
 .button-panel {

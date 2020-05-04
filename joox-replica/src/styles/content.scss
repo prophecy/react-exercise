@@ -67,7 +67,7 @@
 
   img {
     width: 100%;
-    margin: 0px 16px;
+    //margin: 0px 16px;
   }
 
   .content {
@@ -75,7 +75,7 @@
 
   .dots {
     position: relative;
-    z-index: 100000;
+    z-index: $overlayZIndex;
     bottom: 24px;
 
     .BrainhubCarousel__dot {

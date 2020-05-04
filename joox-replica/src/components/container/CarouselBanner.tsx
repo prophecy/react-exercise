@@ -3,7 +3,13 @@ import * as React from "react";
 import Carousel, { Dots } from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
 
-export interface CarouselBannerProps {}
+import { storeContext } from "../../stores/StoreContextProvider";
+
+import { SectionBanner } from "../../stores/data/viewModel";
+
+export interface CarouselBannerProps {
+  viewModel: SectionBanner;
+}
 
 export interface CarouselBannerState {}
 
@@ -11,7 +17,7 @@ class CarouselBanner extends React.Component<
   CarouselBannerProps,
   CarouselBannerState
 > {
-  state = { isSingle: Boolean, urlList: Array<string>(), value: 0 };
+  state = { isSingle: Boolean, value: 0 };
 
   constructor(props: CarouselBannerProps) {
     super(props);
@@ -21,27 +27,22 @@ class CarouselBanner extends React.Component<
   componentDidMount() {
     this.setState({ isSingle: true });
     this.setState({
-      urlList: [
-        "https://imgcache.joox.com/music/joox/photo_th_th/focus_1000/1/e/49c2b1376addaf403cdc74766153801e.jpg",
-        "https://imgcache.joox.com/music/joox/photo_th_th/focus_1000/1/6/e05fc40c2f8135c64fd11e948d20a016.jpg",
-        "https://imgcache.joox.com/music/joox/photo_th_th/focus_1000/9/1/a82673bd46cef523f8dc793340239f91.jpg",
-      ],
+      urlList: [],
     });
   }
 
   onchange(value: number) {
     this.setState({ value });
   }
-
   getItemList = () =>
-    this.state.urlList.map((item, i) => <img key={i} src={item} />);
+    this.props.viewModel.urlList.map((item, i) => <img key={i} src={item} />);
 
   getSingleSlide = () => (
     <Carousel
       infinite
       value={this.state.value}
       autoPlay={2000}
-      animationSpeed={1000}
+      animationSpeed={500}
       //slides={this.getItemList()}
       onChange={this.onchange}
     >
@@ -57,7 +58,7 @@ class CarouselBanner extends React.Component<
           <Dots
             value={this.state.value}
             onChange={this.onchange}
-            number={this.state.urlList.length}
+            number={this.props.viewModel.urlList.length}
           />
         </div>
       </div>

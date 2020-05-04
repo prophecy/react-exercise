@@ -13,8 +13,10 @@ export class Section {
 }
 
 export class SectionBanner extends Section {
-  constructor() {
+  urlList: Array<string>;
+  constructor(urlList: Array<string>) {
     super("");
+    this.urlList = urlList;
   }
 }
 

@@ -32,7 +32,7 @@ const Container: React.SFC<ContainerProps> = () => {
   const itemList = () => {
     return store?.viewModel.mainPage.content.sectionList.map((item, i) => {
       if (item.constructor.name === SectionBanner.name) {
-        return <CarouselBanner key={i} />;
+        return <CarouselBanner key={i} viewModel={item} />;
       } else if (item.constructor.name === HitChart.name) {
         return (
           <RoutableSection key={i} title={item.title}>

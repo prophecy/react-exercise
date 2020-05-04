@@ -1,47 +1,56 @@
 import * as React from "react";
-import {
-  CarouselProvider,
-  Slider,
-  Slide,
-  ButtonBack,
-  ButtonNext,
-} from "pure-react-carousel";
-import "pure-react-carousel/dist/react-carousel.es.css";
+
+import Carousel from "@brainhubeu/react-carousel";
+import "@brainhubeu/react-carousel/lib/style.css";
 
 export interface CarouselBannerProps {}
 
-const CarouselBanner: React.SFC<CarouselBannerProps> = () => {
-  return (
-    <div className="carousel carousal-banner">
-      {" "}
-      <CarouselProvider
-        naturalSlideWidth={1000}
-        naturalSlideHeight={398}
-        totalSlides={3}
-      >
-        <Slider>
-          <Slide index={0}>
-            <img
-              className="carousel-image"
-              src="https://imgcache.joox.com/music/joox/photo_th_th/focus_1000/1/6/e05fc40c2f8135c64fd11e948d20a016.jpg"
-            ></img>
-          </Slide>
-          <Slide index={1}>
-            <img
-              className="carousel-image"
-              src="https://imgcache.joox.com/music/joox/photo_th_th/focus_1000/c/4/f663e8cc1c6e9aaab8b78079946806c4.jpg"
-            ></img>
-          </Slide>
-          <Slide index={2}>
-            <img
-              className="carousel-image"
-              src="https://imgcache.joox.com/music/joox/photo_th_th/focus_1000/1/3/650b7f4b9125ca0d6342eacc33539913.jpg"
-            ></img>
-          </Slide>
-        </Slider>
-      </CarouselProvider>
-    </div>
+export interface CarouselBannerState {}
+
+class CarouselBanner extends React.Component<
+  CarouselBannerProps,
+  CarouselBannerState
+> {
+  state = { isSingle: Boolean, urlList: Array<string>() };
+
+  constructor(props: CarouselBannerProps) {
+    super(props);
+  }
+
+  componentDidMount() {
+    this.setState({ isSingle: true });
+    this.setState({
+      urlList: [
+        "https://imgcache.joox.com/music/joox/photo_th_th/focus_1000/1/e/49c2b1376addaf403cdc74766153801e.jpg",
+        "https://imgcache.joox.com/music/joox/photo_th_th/focus_1000/1/6/e05fc40c2f8135c64fd11e948d20a016.jpg",
+        "https://imgcache.joox.com/music/joox/photo_th_th/focus_1000/9/1/a82673bd46cef523f8dc793340239f91.jpg",
+      ],
+    });
+  }
+
+  getSingleSlide = () => (
+    <Carousel infinite>
+      {this.state.urlList.map((item, i) => (
+        <img key={i} src={item} />
+      ))}
+    </Carousel>
   );
-};
+
+  getThreeSides = () => (
+    <Carousel centered infinite arrows slidesPerPage={2}>
+      {this.state.urlList.map((item, i) => (
+        <img key={i} src={item} />
+      ))}
+    </Carousel>
+  );
+
+  render() {
+    return (
+      <div className="carousel carousal-banner">
+        {this.state.isSingle ? this.getSingleSlide() : this.getThreeSides()}
+      </div>
+    );
+  }
+}
 
 export default CarouselBanner;

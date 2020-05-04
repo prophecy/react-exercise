@@ -63,11 +63,11 @@
 .carousal-banner {
   position: relative;
   padding: 20px 0px;
-  //background-color: mediumorchid;
   background-clip: content-box;
 
-  .carousel-image {
+  img {
     width: 100%;
+    margin: 0px 16px;
   }
 }
 
@@ -84,7 +84,7 @@
 
 .carousel-artist {
   height: 222px;
-  background-color: olivedrab;
+  background-color: pink;
 }
 
 .button-panel {

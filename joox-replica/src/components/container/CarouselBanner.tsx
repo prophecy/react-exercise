@@ -34,6 +34,7 @@ class CarouselBanner extends React.Component<
   onchange(value: number) {
     this.setState({ value });
   }
+
   getItemList = () =>
     this.props.viewModel.urlList.map((item, i) => <img key={i} src={item} />);
 
@@ -50,16 +51,40 @@ class CarouselBanner extends React.Component<
     </Carousel>
   );
 
+  handlePrev = () => {
+    let prevValue = this.state.value - 1;
+    if (prevValue < 0) prevValue = this.props.viewModel.urlList.length - 1;
+    this.setState({ value: prevValue });
+  };
+
+  handleNext = () => {
+    let nextValue = this.state.value + 1;
+    if (nextValue >= this.props.viewModel.urlList.length) nextValue = -1;
+    this.setState({ value: nextValue });
+  };
+
   render() {
     return (
       <div className="carousel carousal-banner">
-        <div className="content">{this.getSingleSlide()}</div>
+        <div>{this.getSingleSlide()}</div>
         <div className="dots">
           <Dots
             value={this.state.value}
             onChange={this.onchange}
             number={this.props.viewModel.urlList.length}
           />
+        </div>
+        <div className="prev">
+          <button
+            onClick={this.handlePrev}
+            className="fa fa-chevron-left"
+          ></button>
+        </div>
+        <div className="next">
+          <button
+            onClick={this.handleNext}
+            className="fa fa-chevron-right"
+          ></button>
         </div>
       </div>
     );

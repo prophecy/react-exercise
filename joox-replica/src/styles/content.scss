@@ -72,10 +72,14 @@
 
   .prev {
     position: absolute;
-    height: 100%;
     width: 100px;
-    top: 0px;
-    background-color: rgba($color: #000000, $alpha: 0.4);
+    top: 20px;
+    bottom: 33px;
+    background-image: linear-gradient(
+      to left,
+      transparent,
+      rgba($color: transparent, $alpha: 0.9)
+    );
     z-index: $overlayZIndex;
     text-align: center;
 
@@ -95,11 +99,15 @@
 
   .next {
     position: absolute;
-    height: 100%;
     width: 100px;
-    top: 0px;
+    top: 20px;
+    bottom: 33px;
     right: 0px;
-    background-color: rgba($color: #000000, $alpha: 0.4);
+    background-image: linear-gradient(
+      to right,
+      transparent,
+      rgba($color: #000000, $alpha: 0.9)
+    );
     z-index: $overlayZIndex;
     margin: 0px 0px;
     text-align: center;

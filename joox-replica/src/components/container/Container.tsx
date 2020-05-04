@@ -7,7 +7,9 @@ import CarouselArtist from "./CarouselArtist";
 import RoutableSection from "./RoutableSection";
 import ButtonPanelLarge from "./ButtonPanelLarge";
 import ButtonPanelMedium from "./ButtonPanelMedium";
+
 import Charts from "../Charts";
+import PlayList from "../Playlist";
 
 import Expander from "./Expander";
 import Sitemap from "./Sitemap";
@@ -79,6 +81,10 @@ const Container: React.SFC<ContainerProps> = () => {
 
   return (
     <Switch>
+      <Route
+        path="/playlist"
+        render={(props) => <div className="container">{<PlayList />}</div>}
+      />
       <Route
         path="/charts"
         render={(props) => <div className="container">{<Charts />}</div>}

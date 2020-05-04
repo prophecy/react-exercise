@@ -1,9 +1,9 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 
 import Carousel from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
 import { MusicPack } from "../../stores/data/viewModel";
-
 export interface CarouselAristProps {
   viewModel: MusicPack;
 }
@@ -23,7 +23,7 @@ class CarouselArtist extends React.Component<
     this.props.viewModel.itemList.map((item, i) => (
       <div className="artist-container">
         <img key={i} src={item.url} />
-        <a href={"playlist/" + item.href}>{item.desc}</a>
+        <Link to={"playlist/" + item.href}>{item.desc}</Link>
       </div>
     ));
 

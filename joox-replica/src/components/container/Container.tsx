@@ -6,7 +6,7 @@ import CarouselMedium from "./CarouselMedium";
 import CarouselArtist from "./CarouselArtist";
 import RoutableSection from "./RoutableSection";
 import ButtonPanelGenre from "./ButtonPanelGenre";
-import ButtonPanelMedium from "./ButtonPanelMedium";
+import ButtonPanelMusicList from "./ButtonPanelMusicList";
 
 import Charts from "../Charts";
 import PlayList from "../Playlist";
@@ -62,7 +62,7 @@ const Container: React.SFC<ContainerProps> = () => {
       } else if (item.constructor.name === MusicList.name) {
         return (
           <RoutableSection key={i} title={item.title}>
-            <ButtonPanelMedium />
+            <ButtonPanelMusicList viewModel={item} />
           </RoutableSection>
         );
       } else if (item.constructor.name === SiteMap.name) {

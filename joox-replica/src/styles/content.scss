@@ -148,7 +148,7 @@
 
 .carousel-song-column {
   height: 160px;
-  background-color: greenyellow;
+  //background-color: greenyellow;
 
   .BrainhubCarousel__trackContainer {
     margin: 0px;
@@ -268,8 +268,42 @@
   }
 }
 
-.button-panel-medium {
-  background-color: yellowgreen;
+.button-panel-music-list {
+  //background-color: yellowgreen;
+  flex-direction: row;
+  height: calc(100vw * 0.14);
+  //margin-bottom: 24px;
+  padding-bottom: 64px;
+
+  .button-music-list {
+    float: left;
+    //background-color: gray;
+    width: calc((100% / 6) - (6px * 2));
+    height: 100%;
+    margin: 0px 6px;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    img {
+      height: 100%;
+      //width: 100%;
+    }
+
+    .link-holder {
+      position: relative;
+      margin: 0px;
+      width: 100%;
+      height: auto;
+
+      a {
+        color: #bcbcbc;
+        text-decoration: none;
+        &:hover {
+          color: rgb(9, 222, 110);
+        }
+      }
+    }
+  }
 }
 
 .expander {

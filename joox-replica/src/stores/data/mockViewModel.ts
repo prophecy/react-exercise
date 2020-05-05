@@ -116,6 +116,39 @@ export const initMockData = () => {
       new _.GenreItem("ลูกทุ่ง", "looktoong"),
     ])
   );
-  viewModel.mainPage.content.sectionList.push(new _.MusicList("ลิสต์เพลง"));
+  viewModel.mainPage.content.sectionList.push(
+    new _.MusicList("ลิสต์เพลง", [
+      new _.MusicListItem(
+        "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/a/6/b1a6abe1e6fb6f89cccdf2fdd88399a6.jpg",
+        "What's Hot Today",
+        "what_hot_today"
+      ),
+      new _.MusicListItem(
+        "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/b/6/6eaf9e47ed44ff7833019b205b9f3fb6.jpg",
+        "เพลงใหม่",
+        "new_song"
+      ),
+      new _.MusicListItem(
+        "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/f/b/dbbf39caa6b9dcd4bbc90192f3dd55fb.jpg",
+        "อังกฤษ",
+        "england"
+      ),
+      new _.MusicListItem(
+        "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/d/2/a209eeba4f21092c513cd2d82ec42cd2.jpg",
+        "เกาหลี",
+        "korea"
+      ),
+      new _.MusicListItem(
+        "https://imgcache.joox.com/music/joox/photo_th_th/toplist_1000/3/d/abad4a741efeff39bec51c0b11c9493d.jpg",
+        "พอดแคสต์",
+        "podcast"
+      ),
+      new _.MusicListItem(
+        "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/3/2/01329554250c8c10c17fb0cf2ea59032.jpg",
+        "ลูกทุ่ง",
+        "looktung"
+      ),
+    ])
+  );
   viewModel.mainPage.content.sectionList.push(new _.SiteMap());
 };

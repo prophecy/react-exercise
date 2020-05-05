@@ -106,7 +106,26 @@ export class Genre extends Section {
   }
 }
 
-export class MusicList extends Section {}
+export class MusicListItem {
+  imgUrl: string;
+  title: string;
+  href: string;
+
+  constructor(imgUrl: string, title: string, href: string) {
+    this.imgUrl = imgUrl;
+    this.title = title;
+    this.href = href;
+  }
+}
+
+export class MusicList extends Section {
+  musicList: Array<MusicListItem>;
+
+  constructor(title: string, musicList: Array<MusicListItem>) {
+    super(title);
+    this.musicList = musicList;
+  }
+}
 
 export class SiteMap extends Section {
   constructor() {

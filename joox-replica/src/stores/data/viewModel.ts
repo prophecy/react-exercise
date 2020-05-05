@@ -1,4 +1,5 @@
 import { observable } from "mobx";
+import { url } from "inspector";
 
 //import { startSamples } from "./sampleCode";
 //import { MusicList } from './viewModel';
@@ -44,16 +45,47 @@ export class MusicPack extends Section {
   ) {
     super(title);
     this.itemList = urlList.map((url, i) => {
-      const mpi = new MusicPackItem();
-      mpi.url = url;
-      mpi.desc = descList[i];
-      mpi.href = hrefList[i];
-      return mpi;
+      const item = new MusicPackItem();
+      item.url = url;
+      item.desc = descList[i];
+      item.href = hrefList[i];
+      return item;
     });
   }
 }
 
-export class SongColumn extends Section {}
+export class SongColumnItem {
+  url: string;
+  desc: string;
+  href: string;
+  color: number;
+
+  constructor() {
+    this.url = this.desc = this.href = "";
+    this.color = 0;
+  }
+}
+
+export class SongColumn extends Section {
+  itemList: Array<SongColumnItem>;
+
+  constructor(
+    title: string,
+    urlList: Array<string>,
+    descList: Array<string>,
+    colorList: Array<number>
+  ) {
+    super(title);
+
+    this.itemList = urlList.map((url, i) => {
+      const item = new SongColumnItem();
+      item.url = url;
+      item.desc = descList[i];
+      item.color = colorList[i];
+      return item;
+    });
+  }
+}
 
 export class Genre extends Section {}
 

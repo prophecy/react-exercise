@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Carousel from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
 import { MusicPack } from "../../stores/data/viewModel";
+
 export interface CarouselAristProps {
   viewModel: MusicPack;
 }

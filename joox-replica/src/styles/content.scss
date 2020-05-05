@@ -146,9 +146,51 @@
   }
 }
 
-.carousel-large {
+.carousel-song-column {
   height: 160px;
-  background-color: mediumseagreen;
+  background-color: greenyellow;
+
+  .BrainhubCarousel__trackContainer {
+    margin: 0px;
+  }
+
+  .song-column-container {
+    margin: 0px;
+    height: 222px;
+
+    display: flex;
+    flex-direction: row;
+
+    .image-holder {
+      margin: 0px;
+
+      img {
+        margin: 0px;
+        height: 160px;
+      }
+    }
+
+    .desc-container {
+      background-color: indigo;
+      height: 160px;
+      width: 216px;
+      margin: 0px 17px 0px 0px;
+
+      a {
+        font-size: 0.875rem;
+        color: #bcbcbc;
+        cursor: pointer;
+        -webkit-transition: color 0.2s;
+        transition: color 0.2s;
+        display: block;
+        line-height: 22px;
+        max-height: 43px;
+        overflow: hidden;
+        margin: 2px 0px;
+        text-decoration: none;
+      }
+    }
+  }
 }
 
 .carousel-medium {

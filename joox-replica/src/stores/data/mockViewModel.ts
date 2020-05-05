@@ -93,8 +93,23 @@ export const initMockData = () => {
       ]
     )
   );
-  viewModel.mainPage.content.sectionList.push(new _.Genre("เพลงใหม่"));
-  viewModel.mainPage.content.sectionList.push(new _.SongColumn("คอลัมน์เพลง"));
+  viewModel.mainPage.content.sectionList.push(
+    new _.SongColumn(
+      "คอลัมน์เพลง",
+      [
+        "https://s.isanook.com/jo/0/rp/rc/w282h160/ya0xa0m1w0/aHR0cDovL2ltYWdlLmpvb3guY29tL0pPT1hjb3Zlci8wL2RjMjFmM2M2ZTY1NDVmNzEvMzAwLmpwZw==.jpg",
+        "https://s.isanook.com/jo/0/rp/rc/w282h160/ya0xa0m1w0/aHR0cDovL2ltYWdlLmpvb3guY29tL0pPT1hjb3Zlci8wLzY5ZjIxNDI4MTMxNjEyMDQvMzAwLmpwZw==.jpg",
+        "https://s.isanook.com/jo/0/rp/rc/w282h160/ya0xa0m1w0/aHR0cDovL2ltYWdlLmpvb3guY29tL0pPT1hjb3Zlci8wLzI2MDUwYTVmYmZmNzQxNjUvMzAwLmpwZw==.jpg",
+      ],
+      [
+        "ชวนมาดู Online Festival กับ Singha Lift It Up by JOOX Homeroom",
+        "JOOX เตรียมส่งความสุขถึงบ้านตลอด 5 วันกับเฟสติวัลการกุศล HOMEROOM",
+        "JOOX VIP Double ซื้อเท่าไหร่ ได้เพิ่มเท่านั้น! 26 – 31 มีนาคมนี้!",
+      ],
+      [0xc1970c, 0x0e2a33, 0x4380c4]
+    )
+  );
+  viewModel.mainPage.content.sectionList.push(new _.Genre("แนวเพลง"));
   viewModel.mainPage.content.sectionList.push(new _.MusicList("ลิสต์เพลง"));
   viewModel.mainPage.content.sectionList.push(new _.SiteMap());
 };

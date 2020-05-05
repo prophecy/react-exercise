@@ -1,7 +1,7 @@
 import React from "react";
 import CarouselBanner from "./CarouselBanner";
 import ContentSection from "./ContentSection";
-import CarouselLarge from "./CarouselLarge";
+import CarouselLarge from "./CarouselSongColumn";
 import CarouselMedium from "./CarouselMedium";
 import CarouselArtist from "./CarouselArtist";
 import RoutableSection from "./RoutableSection";
@@ -56,7 +56,7 @@ const Container: React.SFC<ContainerProps> = () => {
       } else if (item.constructor.name === SongColumn.name) {
         return (
           <RoutableSection key={i} title={item.title}>
-            <CarouselLarge />
+            <CarouselLarge viewModel={item} />
           </RoutableSection>
         );
       } else if (item.constructor.name === MusicList.name) {

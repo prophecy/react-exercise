@@ -18,27 +18,47 @@ export const initMockData = () => {
       [
         "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/9/8/aff2a28324293c8565457364fbd7b798.jpg",
         "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/d/c/0d7621c4ff9998270c6e6ab6037cc5dc.jpg",
+        "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/b/4/01a30137aa9955561bb15f6ddc3895b4.jpg",
         "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/3/5/e4dbf19e97dc4fc2d41e6490df210a35.jpg",
-        "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/9/8/aff2a28324293c8565457364fbd7b798.jpg",
-        "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/d/c/0d7621c4ff9998270c6e6ab6037cc5dc.jpg",
-        "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/3/5/e4dbf19e97dc4fc2d41e6490df210a35.jpg",
+        "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/0/c/c6a473974b94a2fdcd7246473b72c30c.jpg",
       ],
-      ["aaaa", "bbbb", "cccc", "dddd", "eeee"],
-      ["new0", "new1", "new2", "new3", "new4"]
+      [
+        "JOOX for Artist: Gavin D",
+        "JOOX for Artist: Maiyarap",
+        "JOOX for Artist: Fiixd",
+        "JOOK for Artist: MINDSET",
+        "JOOK for Artist: Southside",
+      ],
+      ["gavin_d", "maiyarap", "fiixd", "mindset", "southside"]
     )
   );
   viewModel.mainPage.content.sectionList.push(
     new _.MusicPack(
       "#togetherwecan",
       [
-        "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/b/3/2f915170a43dd6514c3fdbe328c06cb3.jpg",
-        "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/b/5/916127c6512176a2ff39ec2f58635cb5.jpg",
-        "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/0/8/bac1a9ef179070bda269b54bb99bac08.jpg",
-        "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/a/1/59233a563cf87a63ea7cfe8ac87aa2a1.jpg",
-        "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/5/4/4ae45fc9926911668e0256963b4d6954.jpg",
+        "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/e/4/1472b5a2c184c4158fb21b514db647e4.jpg",
+        "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/c/d/cc9f01bd38bfad7042bf1757da353ccd.jpg",
+        "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/e/4/54ca690c8cb587b815911a11739801e4.jpg",
+        "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/0/7/958200052f4d8856dd3dabaebb0c1807.jpg",
+        "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/4/1/6faf93a38aaf0c11ca55dcc48cd4c841.jpg",
+        "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/a/0/060941dd92d29feffbc5f4bdc10a66a0.jpg",
       ],
-      ["aaaa", "bbbb", "cccc", "dddd", "eeee"],
-      ["new0", "new1", "new2", "new3", "new4"]
+      [
+        "ฟังไปด้วยกัน #togetherwecan",
+        "ข่าวร้อน ON JOOX",
+        "ร็อคกันมันส์ดี",
+        "เพราะมาก อยากแชร์",
+        "เพลงเพราะขอแนะนำ",
+        "สโลว์ไลฟ์ไปกับเสียงเพลง",
+      ],
+      [
+        "fung_pai_duay_gun",
+        "ron_on_joox",
+        "rock_gun_mun_dee",
+        "yak_share",
+        "proa_nae_num",
+        "slow_life_pai",
+      ]
     )
   );
   viewModel.mainPage.content.sectionList.push(
@@ -50,9 +70,27 @@ export const initMockData = () => {
         "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/9/b/0178443bf92c00b798c90b7740592c9b.jpg",
         "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/a/c/752179503ac7a9911151c07c3bb3c7ac.jpg",
         "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/5/0/70abf00c9b0bde422d518b68a8a75650.jpg",
+        "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/b/3/a8d55d85d90d78b0307e8540789516b3.jpg",
+        "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/0/1/38045d6c86f7eca517fdd4e677bae701.jpg",
       ],
-      ["aaaa", "bbbb", "cccc", "dddd", "eeee"],
-      ["new0", "new1", "new2", "new3", "new4"]
+      [
+        "New Music [Thai]",
+        "New Music [K-POP]",
+        "New Music [ลูกทุ่ง]",
+        "New Music [Inter]",
+        "New Music [Indie - Inter]",
+        "Hot Songs of The Month [May]",
+        "New Podcast",
+      ],
+      [
+        "thai",
+        "kpop",
+        "looktung",
+        "inter",
+        "indie_inter",
+        "hot_of_month",
+        "new_podcast",
+      ]
     )
   );
   viewModel.mainPage.content.sectionList.push(new _.Genre("เพลงใหม่"));

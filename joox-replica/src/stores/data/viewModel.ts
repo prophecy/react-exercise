@@ -87,7 +87,24 @@ export class SongColumn extends Section {
   }
 }
 
-export class Genre extends Section {}
+export class GenreItem {
+  title: string;
+  href: string;
+
+  constructor(title: string, href: string) {
+    this.title = title;
+    this.href = href;
+  }
+}
+
+export class Genre extends Section {
+  genreList: Array<GenreItem>;
+
+  constructor(title: string, genreList: Array<GenreItem>) {
+    super(title);
+    this.genreList = genreList;
+  }
+}
 
 export class MusicList extends Section {}
 

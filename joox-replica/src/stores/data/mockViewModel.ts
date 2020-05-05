@@ -109,7 +109,13 @@ export const initMockData = () => {
       [0xc1970c, 0x0e2a33, 0x4380c4]
     )
   );
-  viewModel.mainPage.content.sectionList.push(new _.Genre("แนวเพลง"));
+  viewModel.mainPage.content.sectionList.push(
+    new _.Genre("แนวเพลง", [
+      new _.GenreItem("Podcast", "podcast"),
+      new _.GenreItem("K-POP", "kpop"),
+      new _.GenreItem("ลูกทุ่ง", "looktoong"),
+    ])
+  );
   viewModel.mainPage.content.sectionList.push(new _.MusicList("ลิสต์เพลง"));
   viewModel.mainPage.content.sectionList.push(new _.SiteMap());
 };

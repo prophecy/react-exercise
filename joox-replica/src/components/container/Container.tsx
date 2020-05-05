@@ -5,7 +5,7 @@ import CarouselLarge from "./CarouselSongColumn";
 import CarouselMedium from "./CarouselMedium";
 import CarouselArtist from "./CarouselArtist";
 import RoutableSection from "./RoutableSection";
-import ButtonPanelLarge from "./ButtonPanelLarge";
+import ButtonPanelGenre from "./ButtonPanelGenre";
 import ButtonPanelMedium from "./ButtonPanelMedium";
 
 import Charts from "../Charts";
@@ -50,7 +50,7 @@ const Container: React.SFC<ContainerProps> = () => {
       } else if (item.constructor.name === Genre.name) {
         return (
           <RoutableSection key={i} title={item.title}>
-            <ButtonPanelLarge />
+            <ButtonPanelGenre viewModel={item} />
           </RoutableSection>
         );
       } else if (item.constructor.name === SongColumn.name) {

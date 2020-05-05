@@ -236,8 +236,36 @@
   height: 100px;
 }
 
-.button-panel-large {
-  background-color: yellow;
+.button-panel-genre {
+  //background-color: yellow;
+  flex-direction: row;
+  height: calc(100vw * 0.12);
+
+  .button-genre {
+    float: left;
+    background-color: gray;
+    width: calc((100% / 3) - (6px * 2));
+    height: 100%;
+    margin: 0px 6px;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    .link-holder {
+      position: absolute;
+      margin: 0px;
+      width: calc((100% / 3) - (6px * 2));
+      height: auto;
+      bottom: 8px;
+
+      a {
+        color: white;
+        text-decoration: none;
+        &:hover {
+          color: rgb(9, 222, 110);
+        }
+      }
+    }
+  }
 }
 
 .button-panel-medium {

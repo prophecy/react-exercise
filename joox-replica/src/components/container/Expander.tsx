@@ -10,7 +10,7 @@ export interface ExpanderState {
 }
 
 class Expander extends React.Component<ExpanderProps, ExpanderState> {
-  state = { isExpanded: false };
+  state = { isExpanded: true };
 
   handleExpand = () => {
     this.setState({ isExpanded: true });

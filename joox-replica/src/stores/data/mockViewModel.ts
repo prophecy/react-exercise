@@ -150,5 +150,32 @@ export const initMockData = () => {
       ),
     ])
   );
-  viewModel.mainPage.content.sectionList.push(new _.SiteMap());
+  viewModel.mainPage.content.sectionList.push(
+    new _.Sitemap([
+      new _.SitemapItem(
+        "ฟังเพลง",
+        "วาฬเกยตื้น|คั่นกู (เพลงประกอบซีรีส์ เพราะเราคู่กัน)|คิด(แต่ไม่)ถึง (Same Page?)|นิโคติน|ลงใจ|ถ้าฉันเป็นเขา (Special Version)|Goodnight - Single|ไม่ควรคิดถึงเธอ (feat. ตู่ ภพธร)|เบื่อ เบื่อ เบื่อ|ไม่ได้เจอกันมาตั้งนาน - Single|เหมือนจะดี|ลืมว่าต้องลืม (Forgot to forget) - Single"
+      ),
+      new _.SitemapItem(
+        "ลิสต์เพลงเพราะๆ",
+        "ร็อคกันมันส์ดี|เพราะมาก อยากแชร์|เพลงเพราะขอแนะนำ|สโลว์ไลฟ์ไปกับเสียงเพลง|ฟังไปด้วยกัน #togetherwecan|ออกกำลัง เปิดฟังไปด้วย|ฟังแล้วฟินอินตามเพลง|เพลงดี 10 ปีก่อน|จะทำงานให้ดี ต้องมีเพลงฟัง|เพลงน่าฟังจังหวะสนุก|ร้องตาม อาบน้ำเพลิน|เพลงดังยังฟังอยู่"
+      ),
+      new _.SitemapItem(
+        "เพลงใหม่ 2020",
+        "Goodnight - Single|ไม่ควรคิดถึงเธอ (feat. ตู่ ภพธร)|เบื่อ เบื่อ เบื่อ|ไม่ได้เจอกันมาตั้งนาน - Single|เหมือนจะดี|ลืมว่าต้องลืม (Forgot to forget) - Single|ไม่ได้ไปต่อ - Single|จะตายแล้ว|ความรู้สึกที่เปลี่ยน"
+      ),
+      new _.SitemapItem(
+        "ศิลปินยอดฮิต",
+        "BTS|GUNGUN|Indigo|NUM KALA|Scrubb|มนต์แคน แก่นคูน|ส้ม มารี|BOWKYLION|Bodyslam|GOT7|ต่าย อรทัย|Tilly Birds"
+      ),
+      new _.SitemapItem(
+        "เพลงฮิต",
+        "Thailand Top 100|Top 50 International|Top Karaoke Hits|Top 50 Indie|Top 100 เพลงลูกทุ่ง|Top 50 K-Pop|Top 50 Asian|THTOP100 2019|All Time Hits Chart|TOP 50 PODCAST"
+      ),
+      new _.SitemapItem(
+        "ฟังวิทยุออนไลน์",
+        "ยิ่งฟังยิ่งเพราะ สถานีเพลง - ฟังวิทยุออนไลน์ฟรีบน JOOX เรดิโอ|เพลงเพราะ 2563 Station - Listen Online Free on JOOX Radio|2020 Hits [International]|2019 Hits [International]|Pop|Hip-Hop"
+      ),
+    ])
+  );
 };

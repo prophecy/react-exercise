@@ -127,9 +127,22 @@ export class MusicList extends Section {
   }
 }
 
-export class SiteMap extends Section {
-  constructor() {
+export class SitemapItem {
+  title: string;
+  desc: string;
+
+  constructor(title: string, desc: string) {
+    this.title = title;
+    this.desc = desc;
+  }
+}
+
+export class Sitemap extends Section {
+  itemList: Array<SitemapItem>;
+
+  constructor(itemList: Array<SitemapItem>) {
     super("");
+    this.itemList = itemList;
   }
 }
 

@@ -22,7 +22,7 @@ import {
   Genre,
   SongColumn,
   MusicList,
-  SiteMap,
+  Sitemap as SitemapVM,
 } from "../../stores/data/viewModel";
 
 import { Route, Switch, Redirect } from "react-router-dom";
@@ -65,14 +65,14 @@ const Container: React.SFC<ContainerProps> = () => {
             <ButtonPanelMusicList viewModel={item} />
           </RoutableSection>
         );
-      } else if (item.constructor.name === SiteMap.name) {
+      } else if (item.constructor.name === Sitemap.name) {
         return (
           <Expander
             key={i}
             expandedTitle="ปิด sitemap"
             collapsedTitle="แสดง sitemap"
           >
-            <Sitemap />
+            <Sitemap viewModel={item} />
           </Expander>
         );
       }

@@ -30,7 +30,9 @@ class CarouselHitChart extends React.Component<
             {item.songList.map((songName, i) => (
               <p>
                 <b className="bullet">{i + 1}</b>
-                <b>{songName}</b> - {item.artistList[i]}
+                <i className="fa fa-play-circle"></i>
+                <b>{songName}</b> -{" "}
+                <span className="artist">{item.artistList[i]}</span>
               </p>
             ))}
           </div>

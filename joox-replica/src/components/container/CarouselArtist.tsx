@@ -11,9 +11,6 @@ export interface CarouselAristProps {
 
 export interface CarouselArtistState {}
 
-const tmp =
-  "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/4/1/6faf93a38aaf0c11ca55dcc48cd4c841.jpg";
-
 class CarouselArtist extends React.Component<
   CarouselAristProps,
   CarouselArtistState

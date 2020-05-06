@@ -10,7 +10,7 @@ export interface ExpanderState {
 }
 
 class Expander extends React.Component<ExpanderProps, ExpanderState> {
-  state = { isExpanded: true };
+  state = { isExpanded: false };
 
   handleExpand = () => {
     this.setState({ isExpanded: true });
@@ -40,9 +40,9 @@ class Expander extends React.Component<ExpanderProps, ExpanderState> {
               ? this.props.expandedTitle
               : this.props.collapsedTitle}{" "}
             {this.state.isExpanded ? (
-              <i className="fa fa-chevron-up"></i>
+              <i className="fa fa-angle-up"></i>
             ) : (
-              <i className="fa fa-chevron-down"></i>
+              <i className="fa fa-angle-down"></i>
             )}
           </button>
         </div>

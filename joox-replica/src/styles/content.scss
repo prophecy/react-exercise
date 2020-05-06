@@ -237,32 +237,65 @@
 }
 
 .button-panel-genre {
-  //background-color: yellow;
   flex-direction: row;
   height: calc(100vw * 0.12);
 
   .button-genre {
     float: left;
-    background-color: gray;
     width: calc((100% / 3) - (6px * 2));
     height: 100%;
     margin: 0px 6px;
     box-sizing: border-box;
     cursor: pointer;
 
+    .bg-content {
+      width: 100%;
+      height: 100%;
+      margin: 0px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+      }
+
+      .overlay {
+        position: absolute;
+        width: calc((100% / 3) - (6px * 2));
+        height: 100%;
+        margin: 0px;
+        top: 0px;
+
+        background-image: linear-gradient(
+          to bottom,
+          transparent 10%,
+          rgba($color: transparent, $alpha: 0.75) 80%,
+          rgba($color: transparent, $alpha: 0.8) 100%
+        );
+      }
+    }
+
+    &:hover {
+      .link-holder {
+        a {
+          color: rgb(9, 222, 110);
+        }
+      }
+    }
+
     .link-holder {
       position: absolute;
       margin: 0px;
       width: calc((100% / 3) - (6px * 2));
       height: auto;
-      bottom: 8px;
+      bottom: 14px;
 
       a {
         color: white;
         text-decoration: none;
-        &:hover {
-          color: rgb(9, 222, 110);
-        }
+
+        font-size: 18px;
+        font-weight: bold;
       }
     }
   }
@@ -328,6 +361,10 @@
       outline: 0px;
       padding: 15px 5px;
       transition: color 0.2s ease 0s;
+
+      .fa {
+        font-size: 20px;
+      }
     }
   }
 }

@@ -90,10 +90,12 @@ export class SongColumn extends Section {
 export class GenreItem {
   title: string;
   href: string;
+  bgImage: string;
 
-  constructor(title: string, href: string) {
+  constructor(title: string, href: string, bgImage: string) {
     this.title = title;
     this.href = href;
+    this.bgImage = bgImage;
   }
 }
 

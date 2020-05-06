@@ -111,9 +111,21 @@ export const initMockData = () => {
   );
   viewModel.mainPage.content.sectionList.push(
     new _.Genre("แนวเพลง", [
-      new _.GenreItem("Podcast", "podcast"),
-      new _.GenreItem("K-POP", "kpop"),
-      new _.GenreItem("ลูกทุ่ง", "looktoong"),
+      new _.GenreItem(
+        "Podcast",
+        "podcast",
+        "https://s.isanook.com/jooxweb-api/media/uploads/genre/76/1577163863-0738.jpg"
+      ),
+      new _.GenreItem(
+        "K-POP",
+        "kpop",
+        "https://s.isanook.com/jooxweb-api/media/uploads/genre/None/1577163141-0419.jpg"
+      ),
+      new _.GenreItem(
+        "ลูกทุ่ง",
+        "looktoong",
+        "https://s.isanook.com/jooxweb-api/media/uploads/genre/33/1577164641-0999.jpg"
+      ),
     ])
   );
   viewModel.mainPage.content.sectionList.push(

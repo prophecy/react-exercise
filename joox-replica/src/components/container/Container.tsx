@@ -2,7 +2,7 @@ import React from "react";
 import CarouselBanner from "./CarouselBanner";
 import ContentSection from "./ContentSection";
 import CarouselLarge from "./CarouselSongColumn";
-import CarouselMedium from "./CarouselMedium";
+import CarouselMedium from "./CarouselHitChart";
 import CarouselArtist from "./CarouselArtist";
 import RoutableSection from "./RoutableSection";
 import ButtonPanelGenre from "./ButtonPanelGenre";

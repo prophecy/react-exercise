@@ -28,7 +28,7 @@ class CarouselArtist extends React.Component<
   render() {
     return (
       <div className="carousel carousel-artist">
-        <Carousel slidesPerPage={16}>{this.getItemList()}</Carousel>
+        <Carousel slidesPerPage={12}>{this.getItemList()}</Carousel>
       </div>
     );
   }

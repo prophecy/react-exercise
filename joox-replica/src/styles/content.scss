@@ -213,9 +213,15 @@
   background-color: navy;
 }
 
+$artistImageWidth: 169px;
+$artistImageHeight: $artistImageWidth;
+$artistCarouselCount: 12;
+$artistCarouselHeight: 222px;
+$artistCarouselItemMargin: 12px;
+
 .carousel-artist {
-  height: 222px;
-  width: 2960px;
+  height: $artistCarouselHeight;
+  width: ($artistImageWidth + $artistCarouselItemMargin) * $artistCarouselCount;
   background-color: transparent;
 
   .BrainhubCarousel__trackContainer {
@@ -224,11 +230,11 @@
 
   .artist-container {
     margin: 0px;
-    height: 222px;
+    height: $artistCarouselHeight;
 
     img {
       margin: 0px;
-      height: 169px;
+      height: $artistImageHeight;
     }
 
     a {

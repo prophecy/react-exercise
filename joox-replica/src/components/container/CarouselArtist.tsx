@@ -26,7 +26,9 @@ class CarouselArtist extends React.Component<
             <i className="fa fa-play-circle"></i>
           </div>
         </div>
-        <Link to={"playlist/" + item.href}>{item.desc}</Link>
+        <div className="desc-holder">
+          <Link to={"playlist/" + item.href}>{item.desc}</Link>
+        </div>
       </div>
     ));
 

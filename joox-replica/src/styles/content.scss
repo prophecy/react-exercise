@@ -276,14 +276,6 @@
       }
     }
 
-    &:hover {
-      .link-holder {
-        a {
-          color: rgb(9, 222, 110);
-        }
-      }
-    }
-
     .link-holder {
       position: absolute;
       margin: 0px;
@@ -300,6 +292,20 @@
 
       .fa {
         margin-left: 6px;
+        margin-right: 6px;
+        transition: margin 0.3s ease-in-out;
+      }
+    }
+
+    &:hover {
+      .link-holder {
+        a {
+          color: rgb(9, 222, 110);
+        }
+        .fa {
+          margin-left: 12px;
+          margin-right: 0px;
+        }
       }
     }
   }
@@ -312,7 +318,6 @@
 
   .button-music-list {
     float: left;
-    //background-color: gray;
     width: calc((100% / 6) - (6px * 2));
     height: 100%;
     margin: 0px 6px;
@@ -320,8 +325,8 @@
     cursor: pointer;
 
     img {
-      //height: 100%;
       width: 100%;
+      height: auto;
     }
 
     .link-holder {
@@ -344,7 +349,6 @@
 .sitemap {
   width: 100%;
   height: auto;
-  //background-color: gray;
 
   table {
     width: 100%;

@@ -21,6 +21,61 @@ header {
   background-color: $sideBarBgColor;
   box-shadow: 1px 0 1px 0 rgba(0, 0, 0, 0.2);
   z-index: $sideBarZIndex;
+  padding-top: 24px;
+
+  .section-one {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #4a4a4aaa;
+
+    .fa {
+      &:hover {
+        color: rgb(9, 222, 110);
+      }
+    }
+  }
+
+  .section-two {
+    margin-top: 18px;
+  }
+
+  .fa {
+    width: 80%;
+    height: 24px;
+    color: white;
+    z-index: $overlayZIndex;
+    margin: 0px;
+
+    font-size: 20px;
+    text-align: center;
+
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border-right: 10px;
+    border-left: 4px solid $headerBgColor;
+
+    &:hover {
+      border-left: 4px solid rgb(9, 222, 110);
+    }
+  }
+
+  .fa-user-circle {
+    color: plum;
+  }
+
+  .fa-music {
+    color: orangered;
+  }
+  .fa-headphones {
+    color: lightblue;
+  }
+
+  .fa-random {
+    color: lightgreen;
+  }
+
+  .fa-share {
+    color: orange;
+  }
 }
 
 footer {

@@ -75,13 +75,13 @@ class CarouselBanner extends React.Component<
         <div className="prev">
           <button
             onClick={this.handlePrev}
-            className="fa fa-chevron-left"
+            className="fa fa-angle-left"
           ></button>
         </div>
         <div className="next">
           <button
             onClick={this.handleNext}
-            className="fa fa-chevron-right"
+            className="fa fa-angle-right"
           ></button>
         </div>
       </div>

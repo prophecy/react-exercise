@@ -7,4 +7,6 @@
 body {
   background-color: $bodyBgColor;
   color: white;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }

@@ -23,7 +23,7 @@ class CarouselSongColumn extends React.Component<
         <div className="image-holder">
           <img src={item.url} />
         </div>
-        <div className="desc-container">
+        <div className="desc-container" style={{ backgroundColor: item.color }}>
           <Link to={"song-column/" + item.href}>{item.desc}</Link>
         </div>
       </div>

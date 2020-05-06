@@ -58,11 +58,11 @@ export class SongColumnItem {
   url: string;
   desc: string;
   href: string;
-  color: number;
+  color: string;
 
   constructor() {
     this.url = this.desc = this.href = "";
-    this.color = 0;
+    this.color = "#000000";
   }
 }
 
@@ -73,7 +73,7 @@ export class SongColumn extends Section {
     title: string,
     urlList: Array<string>,
     descList: Array<string>,
-    colorList: Array<number>
+    colorList: Array<string>
   ) {
     super(title);
 

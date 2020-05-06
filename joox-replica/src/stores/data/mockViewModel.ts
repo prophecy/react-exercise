@@ -106,7 +106,7 @@ export const initMockData = () => {
         "JOOX เตรียมส่งความสุขถึงบ้านตลอด 5 วันกับเฟสติวัลการกุศล HOMEROOM",
         "JOOX VIP Double ซื้อเท่าไหร่ ได้เพิ่มเท่านั้น! 26 – 31 มีนาคมนี้!",
       ],
-      [0xc1970c, 0x0e2a33, 0x4380c4]
+      ["#c1970c", "#0e2a33", "#bf4a53"]
     )
   );
   viewModel.mainPage.content.sectionList.push(

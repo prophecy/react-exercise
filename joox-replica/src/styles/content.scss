@@ -192,10 +192,11 @@ $songColumnCarouselMargin: 12px;
     }
 
     .desc-container {
-      background-color: indigo;
+      //background-color: indigo;
       height: $songColumnCarouselHeight;
       width: auto;
       margin: 0px;
+      padding: 24px 8px 0px 18px;
 
       a {
         font-size: 0.875rem;
@@ -209,6 +210,7 @@ $songColumnCarouselMargin: 12px;
         overflow: hidden;
         margin: 2px 0px;
         text-decoration: none;
+        text-align: left;
       }
     }
   }

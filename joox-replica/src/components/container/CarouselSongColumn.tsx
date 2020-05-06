@@ -32,7 +32,7 @@ class CarouselSongColumn extends React.Component<
   render() {
     return (
       <div className="carousel carousel-song-column">
-        <Carousel slidesPerPage={2}>{this.getItemList()}</Carousel>
+        <Carousel slidesPerPage={6}>{this.getItemList()}</Carousel>
       </div>
     );
   }

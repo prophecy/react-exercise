@@ -161,8 +161,8 @@
 }
 
 .carousel-song-column {
+  width: 3080px;
   height: 160px;
-  //background-color: greenyellow;
 
   .BrainhubCarousel__trackContainer {
     margin: 0px;
@@ -215,6 +215,7 @@
 
 .carousel-artist {
   height: 222px;
+  width: 2960px;
   background-color: transparent;
 
   .BrainhubCarousel__trackContainer {
@@ -307,6 +308,7 @@
       .fa {
         margin-left: 6px;
         margin-right: 6px;
+        font-weight: normal;
         transition: margin 0.3s ease-in-out;
       }
     }

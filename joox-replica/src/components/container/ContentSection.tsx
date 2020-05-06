@@ -10,10 +10,12 @@ const ContentSection: React.SFC<ContentSectionProps> = ({
 }) => {
   return (
     <div className="section content-section">
+      <div className="section-left-border"></div>
       <div>
         <span className="section-title">{title}</span>
       </div>
       {children}
+      <div className="section-right-border"></div>
     </div>
   );
 };

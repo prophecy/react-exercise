@@ -18,8 +18,28 @@
 .section {
   position: relative;
   display: block;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 45px;
+  margin-right: 45px;
+
+  .section-left-border {
+    position: absolute;
+    width: 45px;
+    height: 100%;
+    top: 0px;
+    left: -45px;
+    z-index: $sideContentZIndex;
+    background-color: #222222;
+  }
+
+  .section-right-border {
+    position: absolute;
+    width: 45px;
+    height: 100%;
+    top: 0px;
+    right: -45px;
+    z-index: $sideContentZIndex;
+    background-color: #222222;
+  }
 
   div {
     display: block;
@@ -192,7 +212,6 @@ $songColumnCarouselMargin: 12px;
     }
 
     .desc-container {
-      //background-color: indigo;
       height: $songColumnCarouselHeight;
       width: auto;
       margin: 0px;
@@ -200,7 +219,7 @@ $songColumnCarouselMargin: 12px;
 
       a {
         font-size: 0.875rem;
-        color: #bcbcbc;
+        color: white;
         cursor: pointer;
         -webkit-transition: color 0.2s;
         transition: color 0.2s;

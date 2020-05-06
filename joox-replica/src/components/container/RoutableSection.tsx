@@ -11,6 +11,7 @@ const RoutableSection: React.SFC<RoutableSectionProps> = ({
 }) => {
   return (
     <div className="section routable-section">
+      <div className="section-left-border"></div>
       <div>
         <span className="section-title routable">
           <Link to="/charts">{title}</Link>{" "}
@@ -18,6 +19,7 @@ const RoutableSection: React.SFC<RoutableSectionProps> = ({
         </span>
       </div>
       {children}
+      <div className="section-right-border"></div>
     </div>
   );
 };

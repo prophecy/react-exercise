@@ -31,8 +31,8 @@ class Sitemap extends React.Component<SitemapProps, SitemapState> {
     const ca = this.chunkArray(itemList, 3);
     const items = ca.map((chunk) => (
       <tr>
-        {chunk.map((item) => (
-          <td>
+        {chunk.map((item, i) => (
+          <td key={i}>
             <SitemapItem viewModel={item} />
           </td>
         ))}

@@ -15,7 +15,7 @@ class CarouselBanner extends React.Component<
   CarouselBannerProps,
   CarouselBannerState
 > {
-  state = { isSingle: Boolean, value: 0 };
+  state = { value: 0 };
 
   constructor(props: CarouselBannerProps) {
     super(props);
@@ -23,7 +23,6 @@ class CarouselBanner extends React.Component<
   }
 
   componentDidMount() {
-    this.setState({ isSingle: true });
     this.setState({
       urlList: [],
     });
@@ -72,13 +71,13 @@ class CarouselBanner extends React.Component<
             number={this.props.viewModel.urlList.length}
           />
         </div>
-        <div className="prev">
+        <div className="prev-banner">
           <button
             onClick={this.handlePrev}
             className="fa fa-angle-left"
           ></button>
         </div>
-        <div className="next">
+        <div className="next-banner">
           <button
             onClick={this.handleNext}
             className="fa fa-angle-right"

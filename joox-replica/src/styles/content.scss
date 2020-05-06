@@ -92,6 +92,61 @@
   position: relative;
   width: 100%;
   box-sizing: border-box;
+
+  .prev {
+    position: absolute;
+    margin: 0px;
+    position: absolute;
+    width: 45px;
+    top: 0px;
+    left: 45px * -1;
+    bottom: 0px;
+    z-index: $overlayZIndex;
+    text-align: center;
+
+    button {
+      background-color: transparent;
+      color: white;
+      border: 0px;
+      height: 100%;
+      width: 100%;
+      font-size: 32px;
+      cursor: pointer;
+      // Fix: This is hard code
+      padding-bottom: 60px;
+    }
+    button:focus {
+      outline: 0;
+    }
+  }
+
+  .next {
+    position: absolute;
+    margin: 0px;
+    position: absolute;
+    width: 45px;
+    top: 0px;
+    // Fix: This calc has some offet :(
+    left: calc(100vw - 45px - (2 * 65px) + 5px);
+    bottom: 0px;
+    z-index: 7000;
+    text-align: center;
+
+    button {
+      background-color: transparent;
+      color: white;
+      border: 0px;
+      height: 100%;
+      width: 100%;
+      font-size: 32px;
+      cursor: pointer;
+      // Fix: This is hard code
+      padding-bottom: 60px;
+    }
+    button:focus {
+      outline: 0;
+    }
+  }
 }
 
 .carousal-banner {
@@ -103,7 +158,7 @@
     width: 100%;
   }
 
-  .prev {
+  .prev-banner {
     position: absolute;
     width: 100px;
     top: 20px;
@@ -134,7 +189,7 @@
     }
   }
 
-  .next {
+  .next-banner {
     position: absolute;
     width: 100px;
     top: 20px;

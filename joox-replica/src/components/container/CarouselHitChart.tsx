@@ -28,7 +28,7 @@ class CarouselHitChart extends React.Component<
           <h1>{item.title}</h1>
           <div className="song-container">
             {item.songList.map((songName, i) => (
-              <p>
+              <p key={i}>
                 <b className="bullet">{i + 1}</b>
                 <i className="fa fa-play-circle"></i>
                 <b>{songName}</b> -{" "}

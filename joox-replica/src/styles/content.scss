@@ -160,9 +160,15 @@
   }
 }
 
+$songColumnCarouselCount: 6;
+$songColumnCarouselWidth: 500px;
+$songColumnCarouselHeight: 160px;
+$songColumnCarouselMargin: 12px;
+
 .carousel-song-column {
-  width: 3080px;
-  height: 160px;
+  width: ($songColumnCarouselWidth + $songColumnCarouselMargin) *
+    $songColumnCarouselCount;
+  height: $songColumnCarouselHeight;
 
   .BrainhubCarousel__trackContainer {
     margin: 0px;
@@ -170,7 +176,8 @@
 
   .song-column-container {
     margin: 0px;
-    height: 222px;
+    width: $songColumnCarouselWidth;
+    height: $songColumnCarouselHeight;
 
     display: flex;
     flex-direction: row;
@@ -180,15 +187,15 @@
 
       img {
         margin: 0px;
-        height: 160px;
+        height: $songColumnCarouselHeight;
       }
     }
 
     .desc-container {
       background-color: indigo;
-      height: 160px;
-      width: 216px;
-      margin: 0px 17px 0px 0px;
+      height: $songColumnCarouselHeight;
+      width: auto;
+      margin: 0px;
 
       a {
         font-size: 0.875rem;

@@ -100,3 +100,33 @@ $logoWidth: 100px;
   outline: none;
   transition: all 0.35s ease 0s;
 }
+
+.expander {
+  height: 46px;
+  min-height: 66px;
+  border-top: 1px solid rgb(55, 55, 55);
+
+  div {
+    margin-bottom: 20px;
+    text-align: center;
+    button {
+      height: 16px;
+      font-size: 0.875rem;
+      color: rgb(149, 149, 149);
+      letter-spacing: 0.52px;
+      cursor: pointer;
+      background: transparent;
+      border-width: 0px;
+      border-style: initial;
+      border-color: initial;
+      border-image: initial;
+      outline: 0px;
+      padding: 15px 5px;
+      transition: color 0.2s ease 0s;
+
+      .fa {
+        font-size: 20px;
+      }
+    }
+  }
+}

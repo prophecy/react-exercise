@@ -306,10 +306,8 @@
 }
 
 .button-panel-music-list {
-  //background-color: yellowgreen;
   flex-direction: row;
   height: calc(100vw * 0.14);
-  //margin-bottom: 24px;
   padding-bottom: 64px;
 
   .button-music-list {
@@ -322,8 +320,8 @@
     cursor: pointer;
 
     img {
-      height: 100%;
-      //width: 100%;
+      //height: 100%;
+      width: 100%;
     }
 
     .link-holder {
@@ -338,36 +336,6 @@
         &:hover {
           color: rgb(9, 222, 110);
         }
-      }
-    }
-  }
-}
-
-.expander {
-  height: 46px;
-  min-height: 66px;
-  border-top: 1px solid rgb(55, 55, 55);
-
-  div {
-    margin-bottom: 20px;
-    text-align: center;
-    button {
-      height: 16px;
-      font-size: 0.875rem;
-      color: rgb(149, 149, 149);
-      letter-spacing: 0.52px;
-      cursor: pointer;
-      background: transparent;
-      border-width: 0px;
-      border-style: initial;
-      border-color: initial;
-      border-image: initial;
-      outline: 0px;
-      padding: 15px 5px;
-      transition: color 0.2s ease 0s;
-
-      .fa {
-        font-size: 20px;
       }
     }
   }

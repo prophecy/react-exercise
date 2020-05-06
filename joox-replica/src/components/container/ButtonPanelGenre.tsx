@@ -15,7 +15,7 @@ const ButtonPanelGenre: React.SFC<ButtonPanelGenreProps> = (props) => {
             <div className="overlay"></div>
           </div>
           <div className="link-holder">
-            <a href={item.href}>{item.title}</a>{" "}
+            <a href={item.href}>{item.title}</a>
             <a className="fa fa-angle-right" href={item.href}></a>
           </div>
         </div>

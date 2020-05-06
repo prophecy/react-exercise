@@ -11,7 +11,31 @@ export const initMockData = () => {
       "https://imgcache.joox.com/music/joox/photo_th_th/focus_1000/9/1/a82673bd46cef523f8dc793340239f91.jpg",
     ])
   );
-  viewModel.mainPage.content.sectionList.push(new _.HitChart("ชาร์ตเพลงฮิต"));
+  viewModel.mainPage.content.sectionList.push(
+    new _.HitChart("ชาร์ตเพลงฮิต", [
+      new _.HitChartItem(
+        "https://s.isanook.com/jo/0/rp/rc/w240h240/ya0xa0m1w0/aHR0cDovL2ltZ2NhY2hlLmpvb3guY29tL211c2ljL2pvb3gvcGhvdG9fdGhfdGgvdG9wbGlzdF8zMDAvMy81L2RiNDY1ODExOGRjMDc3NGMwYjQyYTQ4NGYzNDkwNTM1LmpwZw==.jpg",
+        "Top 50 Indie",
+        "#3b2d30",
+        ["ร้อนของ", "Hello mana", "รอให้เธอ (Remiss Version)"],
+        ["Tattoo Colour", "TaitosmitH", "Mirrr"]
+      ),
+      new _.HitChartItem(
+        "https://s.isanook.com/jo/0/rp/rc/w240h240/ya0xa0m1w0/aHR0cDovL2ltZ2NhY2hlLmpvb3guY29tL211c2ljL2pvb3gvcGhvdG9fdGhfdGgvdG9wbGlzdF8zMDAvZi8yLzEyNWI4ZmE3YzE3OTI3NzU1NDZhMzlmZDYxOTNmYWYyLmpwZw==.jpg",
+        "Top 100 เพลงลูกทุ่ง",
+        "#abb0b4",
+        ["หมดเวลา", "กอดเสาเถียง (Story จักรวาลไทบ้าน)", "วิธีบอกเลิก"],
+        ["เจนนี่ ได้หมดถ้าสดชื่น", "ปรีชา ปัดภัย", "ก้อง ห้วยไร่"]
+      ),
+      new _.HitChartItem(
+        "https://s.isanook.com/jo/0/rp/rc/w240h240/ya0xa0m1w0/aHR0cDovL2ltZ2NhY2hlLmpvb3guY29tL211c2ljL2pvb3gvcGhvdG9fdGhfdGgvdG9wbGlzdF8zMDAvNy80LzkxNjllMWY2NDVlZDMzYmFmOTFiNWY2ZWFlM2RjZTc0LmpwZw==.jpg",
+        "Top 50 Asian",
+        "#989c9d",
+        ["[Theme Song] Wu Ji", "學貓叫", "芒种"],
+        ["Xiao Zhan, Wang Yibo", "小潘潘, 小峰峰", "音阙诗听, 赵方婧"]
+      ),
+    ])
+  );
   viewModel.mainPage.content.sectionList.push(
     new _.MusicPack(
       "JOOX for Artists",

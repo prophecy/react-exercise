@@ -122,8 +122,12 @@
       border: 0px;
       height: 100%;
       width: 100%;
-      font-size: 28px;
+      font-size: 44px;
       cursor: pointer;
+
+      &:hover {
+        color: rgb(9, 222, 110);
+      }
     }
     button:focus {
       outline: 0;
@@ -151,8 +155,12 @@
       border: 0px;
       height: 100%;
       width: 100%;
-      font-size: 28px;
+      font-size: 44px;
       cursor: pointer;
+
+      &:hover {
+        color: rgb(9, 222, 110);
+      }
     }
     button:focus {
       outline: 0;
@@ -235,10 +243,120 @@ $songColumnCarouselMargin: 12px;
   }
 }
 
-.carousel-medium {
-  padding: 0px;
-  height: 120px;
-  background-color: navy;
+$hitChartCarouselCount: 6;
+$hitChartCarouselWidth: 350px;
+$hitChartCarouselHeight: 120px;
+$hitChartCarouselImageWidth: $hitChartCarouselHeight;
+$hitChartCarouselMargin: 12px;
+
+.carousel-hit-chart {
+  //background-color: burlywood;
+
+  width: ($hitChartCarouselWidth + $hitChartCarouselMargin) *
+    $hitChartCarouselCount;
+  height: $hitChartCarouselHeight;
+
+  .BrainhubCarousel__trackContainer {
+    margin: 0px;
+  }
+
+  .hit-chart-container {
+    margin: 0px;
+    width: $hitChartCarouselWidth;
+    height: $hitChartCarouselHeight;
+
+    display: flex;
+    flex-direction: row;
+
+    .image-holder {
+      margin: 0px;
+
+      img {
+        margin: 0px;
+        height: $hitChartCarouselHeight;
+      }
+    }
+
+    .desc-container {
+      position: relative;
+      height: $hitChartCarouselHeight;
+      width: 100%;
+      margin: 0px;
+      padding-top: 6px;
+
+      h1 {
+        max-width: 100%;
+        padding-left: 10px;
+        font-size: 0.875rem;
+        color: white;
+        cursor: pointer;
+        -webkit-transition: color 0.2s;
+        transition: color 0.2s;
+        display: block;
+        line-height: 22px;
+        max-height: 43px;
+        overflow: hidden;
+        margin: 2px 0px 8px 0px;
+        text-decoration: none;
+        text-align: left;
+        white-space: nowrap;
+      }
+
+      .song-container {
+        position: absolute;
+        margin-top: 0px;
+        left: 12px;
+        right: 8px;
+
+        p {
+          max-width: 98%;
+          font-size: 0.87rem;
+          color: white;
+          cursor: pointer;
+          -webkit-transition: color 0.2s;
+          transition: color 0.2s;
+          display: block;
+          line-height: 22px;
+          max-height: 43px;
+          overflow: hidden;
+          margin: 0px 0px 4px 0px;
+          text-decoration: none;
+          text-align: left;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+
+          .bullet {
+            padding-right: 12px;
+          }
+
+          .fa {
+            display: none;
+            padding-right: 8px;
+            font-size: 0.9rem;
+          }
+
+          .artist {
+            transition: font-weight 0.1s ease-in-out;
+          }
+
+          &:hover {
+            .bullet {
+              visibility: hidden;
+              display: none;
+            }
+            .fa {
+              visibility: visible;
+              display: inline-block;
+            }
+            .artist {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 $artistImageWidth: 169px;
@@ -257,26 +375,77 @@ $artistCarouselItemMargin: 12px;
   }
 
   .artist-container {
+    position: relative;
     margin: 0px;
     height: $artistCarouselHeight;
+    //height: $artistImageHeight;
 
-    img {
+    .image-holder {
+      position: relative;
       margin: 0px;
+      width: $artistImageWidth;
       height: $artistImageHeight;
+
+      img {
+        margin: 0px;
+        height: $artistImageHeight;
+      }
+
+      .overlay {
+        position: absolute;
+        width: 100%;
+        height: $artistImageHeight;
+        margin: 0px;
+        top: $artistImageHeight;
+
+        z-index: $overlayZIndex;
+        transition: all 0.5s ease-in-out;
+
+        background-image: linear-gradient(
+          to bottom,
+          transparent 30%,
+          rgba($color: transparent, $alpha: 0.88) 85%
+        );
+
+        .fa {
+          position: absolute;
+          right: 14px;
+          bottom: 22px;
+          font-size: 30px;
+        }
+      }
+
+      &:hover {
+        .overlay {
+          top: 0px;
+        }
+      }
     }
 
-    a {
-      font-size: 0.875rem;
-      color: #bcbcbc;
-      cursor: pointer;
-      -webkit-transition: color 0.2s;
-      transition: color 0.2s;
-      display: block;
-      line-height: 22px;
-      max-height: 43px;
-      overflow: hidden;
-      margin: 2px 0px;
-      text-decoration: none;
+    .desc-holder {
+      position: absolute;
+      margin: 0px;
+      background-color: #222222;
+      height: 100px;
+      z-index: 6000;
+      top: $artistImageHeight - 10px;
+      left: 0px;
+      right: 0px;
+
+      a {
+        height: 100%;
+        font-size: 0.875rem;
+        color: #bcbcbc;
+        cursor: pointer;
+        -webkit-transition: color 0.2s;
+        transition: color 0.2s;
+        display: block;
+        line-height: 22px;
+        max-height: 43px;
+        overflow: hidden;
+        margin: 2px 0px;
+        text-decoration: none;
+      }
     }
   }
 }

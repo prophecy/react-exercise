@@ -22,7 +22,36 @@ export class SectionBanner extends Section {
   }
 }
 
-export class HitChart extends Section {}
+export class HitChartItem {
+  url: string;
+  title: string;
+  color: string;
+  songList: Array<string>;
+  artistList: Array<string>;
+
+  constructor(
+    url: string,
+    title: string,
+    color: string,
+    songList: Array<string>,
+    artistList: Array<string>
+  ) {
+    this.url = url;
+    this.title = title;
+    this.color = color;
+    this.songList = songList;
+    this.artistList = artistList;
+  }
+}
+
+export class HitChart extends Section {
+  itemList: Array<HitChartItem>;
+
+  constructor(title: string, itemList: Array<HitChartItem>) {
+    super(title);
+    this.itemList = itemList;
+  }
+}
 
 export class MusicPackItem {
   url: string;

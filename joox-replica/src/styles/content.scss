@@ -40,8 +40,22 @@
       a {
         color: white;
         text-decoration: none;
-        &:hover {
+      }
+      .fa {
+        margin-left: 0px;
+        margin-right: 6px;
+        transition: margin 0.3s ease-in-out;
+      }
+
+      &:hover {
+        a {
           color: rgb(9, 222, 110);
+        }
+
+        .fa {
+          color: rgb(9, 222, 110);
+          margin-left: 6px;
+          margin-right: 0px;
         }
       }
     }
@@ -332,14 +346,18 @@
     .link-holder {
       position: relative;
       margin: 0px;
+      margin-top: 8px;
       width: 100%;
       height: auto;
+      text-align: left;
 
       a {
         color: #bcbcbc;
         text-decoration: none;
+        transition: color 0.2s ease-in-out;
+
         &:hover {
-          color: rgb(9, 222, 110);
+          color: white;
         }
       }
     }

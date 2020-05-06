@@ -38,7 +38,7 @@ const Container: React.SFC<ContainerProps> = () => {
       } else if (item.constructor.name === HitChart.name) {
         return (
           <RoutableSection key={i} title={item.title}>
-            <CarouselMedium />
+            <CarouselMedium viewModel={item} />
           </RoutableSection>
         );
       } else if (item.constructor.name === MusicPack.name) {

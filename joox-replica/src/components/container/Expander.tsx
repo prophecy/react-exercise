@@ -19,6 +19,12 @@ class Expander extends React.Component<ExpanderProps, ExpanderState> {
     this.setState({ isExpanded: false });
   };
 
+  showExpandItem = () => {
+    return (
+      this.props.collapsedTitle + " " + <i className="fa fa-chevron-up"></i>
+    );
+  };
+
   render() {
     return (
       <div className="expander">
@@ -32,7 +38,12 @@ class Expander extends React.Component<ExpanderProps, ExpanderState> {
           >
             {this.state.isExpanded
               ? this.props.expandedTitle
-              : this.props.collapsedTitle}
+              : this.props.collapsedTitle}{" "}
+            {this.state.isExpanded ? (
+              <i className="fa fa-chevron-up"></i>
+            ) : (
+              <i className="fa fa-chevron-down"></i>
+            )}
           </button>
         </div>
         {this.state.isExpanded ? this.props.children : ""}

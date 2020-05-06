@@ -340,16 +340,25 @@
   table {
     width: 100%;
     display: table;
-    margin: 0px;
+    margin-bottom: 80px;
+
+    td {
+      vertical-align: top;
+      padding: 0px 10px 0px 6px;
+    }
 
     .sitemap-item {
       margin: 0px;
-      //background-color: plum;
-      //width: 1000px;
-      //height: auto;
+
+      h1 {
+        font-size: 14px;
+        text-align: left;
+      }
 
       p {
         color: #959595;
+        font-size: 12px;
+        text-align: left;
       }
     }
   }

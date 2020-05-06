@@ -20,7 +20,12 @@ class CarouselArtist extends React.Component<
   getItemList = () =>
     this.props.viewModel.itemList.map((item, i) => (
       <div key={i} className="artist-container">
-        <img src={item.url} />
+        <div className="image-holder">
+          <img src={item.url} />
+          <div className="overlay">
+            <i className="fa fa-play-circle"></i>
+          </div>
+        </div>
         <Link to={"playlist/" + item.href}>{item.desc}</Link>
       </div>
     ));

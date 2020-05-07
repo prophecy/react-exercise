@@ -34,24 +34,53 @@ header {
     padding-bottom: 10px;
     border-bottom: 1px solid #4a4a4aaa;
 
-    .fa {
+    .choice {
       &:hover {
-        color: rgb(9, 222, 110);
+        .fa {
+          color: rgb(9, 222, 110);
+        }
+        p {
+          color: rgb(9, 222, 110);
+        }
+      }
+
+      p {
+        font-weight: bold;
       }
     }
   }
 
   .section-two {
     margin-top: 18px;
+
+    .choice {
+      p {
+        font-weight: normal;
+        color: #bcbcbc;
+      }
+      &:hover {
+        p {
+          color: rgb(9, 222, 110);
+        }
+      }
+    }
   }
 
   .choice {
+    p {
+      display: inline;
+      //font-weight: bold;
+      margin-left: 14px;
+      font-size: 15px;
+    }
+
     .fa {
-      width: 48px;
+      width: 24px;
       height: 24px;
       color: white;
       z-index: $overlayZIndex;
       margin: 0px;
+      padding-left: 12px;
 
       font-size: 20px;
       text-align: center;
@@ -65,7 +94,9 @@ header {
     border-left: 4px solid #222222;
 
     &:hover {
-      border-left: 4px solid rgb(9, 222, 110);
+      .fa {
+        border-left: 4px solid rgb(9, 222, 110);
+      }
     }
 
     .fa-user-circle {

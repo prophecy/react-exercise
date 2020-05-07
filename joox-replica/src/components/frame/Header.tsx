@@ -1,11 +1,14 @@
 import React from "react";
+import { PropTypes } from "mobx-react";
 
-export interface HeaderProps {}
+export interface HeaderProps {
+  handleClickHamburger: () => void;
+}
 
-const Header: React.SFC<HeaderProps> = () => {
+const Header: React.SFC<HeaderProps> = (props) => {
   return (
     <header>
-      <div className="hamburger">
+      <div onClick={() => props.handleClickHamburger()} className="hamburger">
         <i className="fa fa-bars"></i>
       </div>
       <div className="logo-wrap">

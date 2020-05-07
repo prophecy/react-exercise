@@ -12,11 +12,18 @@ header {
   flex-direction: row;
 }
 
+.side-bar-expanded {
+  width: 220px;
+}
+
+.side-bar-collapsed {
+  width: $sideBarWidth;
+}
+
 .side-bar {
   position: fixed;
-  top: $headerHeight;
   left: 0px;
-  width: $sideBarWidth;
+  top: $headerHeight;
   bottom: $footerHeight;
   background-color: $sideBarBgColor;
   box-shadow: 1px 0 1px 0 rgba(0, 0, 0, 0.2);
@@ -38,43 +45,47 @@ header {
     margin-top: 18px;
   }
 
-  .fa {
-    width: 80%;
-    height: 24px;
-    color: white;
-    z-index: $overlayZIndex;
-    margin: 0px;
+  .choice {
+    .fa {
+      width: 48px;
+      height: 24px;
+      color: white;
+      z-index: $overlayZIndex;
+      margin: 0px;
 
-    font-size: 20px;
-    text-align: center;
+      font-size: 20px;
+      text-align: center;
 
-    margin-top: 8px;
-    margin-bottom: 8px;
-    border-right: 10px;
-    border-left: 4px solid $headerBgColor;
+      margin-top: 8px;
+      margin-bottom: 8px;
+      border-right: 10px;
+      border-left: 4px solid $headerBgColor;
+    }
+
+    border-left: 4px solid #222222;
 
     &:hover {
       border-left: 4px solid rgb(9, 222, 110);
     }
-  }
 
-  .fa-user-circle {
-    color: plum;
-  }
+    .fa-user-circle {
+      color: plum;
+    }
 
-  .fa-music {
-    color: orangered;
-  }
-  .fa-headphones {
-    color: lightblue;
-  }
+    .fa-music {
+      color: orangered;
+    }
+    .fa-headphones {
+      color: lightblue;
+    }
 
-  .fa-random {
-    color: lightgreen;
-  }
+    .fa-random {
+      color: lightgreen;
+    }
 
-  .fa-share {
-    color: orange;
+    .fa-share {
+      color: orange;
+    }
   }
 }
 

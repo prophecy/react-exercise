@@ -25,7 +25,20 @@ const Footer: React.SFC<FooterProps> = () => {
           <i className="fa fa-history"></i>
         </div>
       </div>
-      <div className="timeline"></div>
+      <div className="timeline">
+        <div className="timeline-inner">
+          <div className="upper">
+            <p>Yummy</p>
+            <p>Justin Bieber</p>
+            <i className="fa fa-star"></i>
+            <i className="fa fa-info-circle"></i>
+          </div>
+          <div className="lower">
+            <p>00:00</p>
+            <p>23:24</p>
+          </div>
+        </div>
+      </div>
       <div className="info">
         <div className="info-inner">
           <div className="info-holder">

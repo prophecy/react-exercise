@@ -124,7 +124,7 @@ header {
   }
 }
 
-$controllerPanelWidth: 220px;
+$controllerPanelWidth: 210px;
 $controllerPanelMarginLeft: 100px;
 $infoPanelWidth: 220px;
 
@@ -191,10 +191,28 @@ footer {
   .timeline {
     position: absolute;
     height: 100%;
-    top: 0px;
-    right: $infoPanelWidth;
+    top: 10px;
+    right: $infoPanelWidth + 10px;
     left: $controllerPanelMarginLeft + $controllerPanelWidth;
-    background-color: palevioletred;
+
+    .timeline-inner {
+      p {
+        margin: 0px;
+        display: inline;
+      }
+
+      .upper {
+        width: 100%;
+        //background-color: darkolivegreen;
+        display: flex;
+        flex-direction: row;
+      }
+
+      .lower {
+        width: 100%;
+        //background-color: darkgoldenrod;
+      }
+    }
   }
 
   .info {

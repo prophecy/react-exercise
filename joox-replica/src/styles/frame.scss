@@ -30,9 +30,13 @@ header {
   z-index: $sideBarZIndex;
   padding-top: 24px;
 
-  .section-one {
+  .sidb-bar-section {
     padding-bottom: 10px;
     border-bottom: 1px solid #4a4a4aaa;
+  }
+
+  .section-one {
+    margin: 0px;
 
     .choice {
       &:hover {
@@ -46,6 +50,7 @@ header {
 
       p {
         font-weight: bold;
+        font-size: 15px;
       }
     }
   }
@@ -57,6 +62,7 @@ header {
       p {
         font-weight: normal;
         color: #bcbcbc;
+        font-size: 13px;
       }
       &:hover {
         p {
@@ -71,7 +77,6 @@ header {
       display: inline;
       //font-weight: bold;
       margin-left: 14px;
-      font-size: 15px;
     }
 
     .fa {

@@ -7,10 +7,22 @@ export interface SidebBrProps {
 export interface SideBarState {}
 
 class SideBar extends React.Component<SidebBrProps, SideBarState> {
+  getSideBar = () => {
+    return this.props.isExpanded ? (
+      <div className="side-bar side-bar-expanded">{this.getContent()}</div>
+    ) : (
+      <div className="side-bar side-bar-collapsed">{this.getContent()}</div>
+    );
+  };
+
+  render() {
+    return this.getSideBar();
+  }
+
   getContent = () => {
     return (
       <React.Fragment>
-        <div className="section-one">
+        <div className="sidb-bar-section section-one">
           <div className="choice">
             <i className="fa fa-globe"></i>
             {this.props.isExpanded ? <p>DISCOVER</p> : ""}
@@ -24,7 +36,7 @@ class SideBar extends React.Component<SidebBrProps, SideBarState> {
             {this.props.isExpanded ? <p>VIP</p> : ""}
           </div>
         </div>
-        <div className="section-two">
+        <div className="sidb-bar-section section-two">
           <div className="choice">
             <i className="fa fa-user-circle"></i>
             {this.props.isExpanded ? <p>ศิลปิน</p> : ""}
@@ -49,18 +61,6 @@ class SideBar extends React.Component<SidebBrProps, SideBarState> {
       </React.Fragment>
     );
   };
-
-  getSideBar = () => {
-    return this.props.isExpanded ? (
-      <div className="side-bar side-bar-expanded">{this.getContent()}</div>
-    ) : (
-      <div className="side-bar side-bar-collapsed">{this.getContent()}</div>
-    );
-  };
-
-  render() {
-    return this.getSideBar();
-  }
 }
 
 export default SideBar;

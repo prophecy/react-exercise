@@ -28,14 +28,15 @@ const Footer: React.SFC<FooterProps> = () => {
       <div className="timeline">
         <div className="timeline-inner">
           <div className="upper">
-            <p>Yummy</p>
-            <p>Justin Bieber</p>
-            <i className="fa fa-star"></i>
-            <i className="fa fa-info-circle"></i>
+            <p className="song-name">Yummy</p>
+            <p className="artist-name">Justin Bieber</p>
+            <i className="song-fav fa fa-star"></i>
+            <i className="song-info fa fa-info-circle"></i>
           </div>
           <div className="lower">
-            <p>00:00</p>
-            <p>23:24</p>
+            <p className="current">00:00</p>
+            <div className="volume"></div>
+            <p className="duration">23:24</p>
           </div>
         </div>
       </div>

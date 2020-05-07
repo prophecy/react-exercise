@@ -45,12 +45,40 @@ export const initMockData = () => {
         "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/b/4/01a30137aa9955561bb15f6ddc3895b4.jpg",
         "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/3/5/e4dbf19e97dc4fc2d41e6490df210a35.jpg",
         "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/0/c/c6a473974b94a2fdcd7246473b72c30c.jpg",
+
+        "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/9/8/aff2a28324293c8565457364fbd7b798.jpg",
+        "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/d/c/0d7621c4ff9998270c6e6ab6037cc5dc.jpg",
+        "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/b/4/01a30137aa9955561bb15f6ddc3895b4.jpg",
+        "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/3/5/e4dbf19e97dc4fc2d41e6490df210a35.jpg",
+        "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/0/c/c6a473974b94a2fdcd7246473b72c30c.jpg",
+
+        "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/9/8/aff2a28324293c8565457364fbd7b798.jpg",
+        "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/d/c/0d7621c4ff9998270c6e6ab6037cc5dc.jpg",
+        "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/b/4/01a30137aa9955561bb15f6ddc3895b4.jpg",
+        "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/3/5/e4dbf19e97dc4fc2d41e6490df210a35.jpg",
+        "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/0/c/c6a473974b94a2fdcd7246473b72c30c.jpg",
+
+        "https://imgcache.joox.com/music/joox/photo_th_th/toplist_300/0/c/c6a473974b94a2fdcd7246473b72c30c.jpg",
       ],
       [
         "JOOX for Artist: Gavin D",
         "JOOX for Artist: Maiyarap",
         "JOOX for Artist: Fiixd",
         "JOOK for Artist: MINDSET",
+        "JOOK for Artist: Southside",
+
+        "JOOX for Artist: Gavin D",
+        "JOOX for Artist: Maiyarap",
+        "JOOX for Artist: Fiixd",
+        "JOOK for Artist: MINDSET",
+        "JOOK for Artist: Southside",
+
+        "JOOX for Artist: Gavin D",
+        "JOOX for Artist: Maiyarap",
+        "JOOX for Artist: Fiixd",
+        "JOOK for Artist: MINDSET",
+        "JOOK for Artist: Southside",
+
         "JOOK for Artist: Southside",
       ],
       ["gavin_d", "maiyarap", "fiixd", "mindset", "southside"]

@@ -126,7 +126,7 @@ header {
 
 $controllerPanelWidth: 220px;
 $controllerPanelMarginLeft: 100px;
-$infoPanelWidth: 256px;
+$infoPanelWidth: 220px;
 
 footer {
   position: fixed;
@@ -165,9 +165,10 @@ footer {
     height: auto;
     text-align: center;
     position: relative;
+    padding-top: 7px;
+
     display: flex;
     flex-direction: row;
-    padding-top: 7px;
 
     .controller {
       cursor: pointer;
@@ -189,7 +190,6 @@ footer {
 
   .timeline {
     position: absolute;
-    //width: $timelinePanelWidth;
     height: 100%;
     top: 0px;
     right: $infoPanelWidth;
@@ -199,10 +199,61 @@ footer {
 
   .info {
     position: absolute;
+
     width: $infoPanelWidth;
     height: 100%;
+
     top: 0px;
     right: 0px;
-    background-color: peachpuff;
+
+    .info-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      margin-top: 6px;
+
+      display: flex;
+      flex-direction: row;
+
+      .info-holder {
+        position: relative;
+        width: 38px;
+        height: 100%;
+        color: #959595;
+        margin-top: 12px;
+      }
+
+      .section-two {
+        margin-left: 60px;
+      }
+
+      .section-three {
+        margin-left: 30px;
+      }
+
+      .volume-holder {
+        margin-top: 20px;
+
+        .volume {
+          position: absolute;
+          left: 24px;
+          margin: 0 auto;
+          height: 2px;
+          width: 60px;
+          background: white;
+          border-radius: 15px;
+
+          .ui-slider-range-min {
+            height: 2px;
+            width: 60px;
+            position: absolute;
+            background: blue;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+          }
+        }
+      }
+    }
   }
 }

@@ -26,7 +26,22 @@ const Footer: React.SFC<FooterProps> = () => {
         </div>
       </div>
       <div className="timeline"></div>
-      <div className="info"></div>
+      <div className="info">
+        <div className="info-inner">
+          <div className="info-holder">
+            <i className="fa fa-volume-up"></i>
+          </div>
+          <div className="volume-holder">
+            <div className="volume"></div>
+          </div>
+          <div className="info-holder section-two">
+            <i className="fa fa-music"></i>
+          </div>
+          <div className="info-holder section-three">
+            <i className="fa fa-tasks"></i>
+          </div>
+        </div>
+      </div>
     </footer>
   );
 };
